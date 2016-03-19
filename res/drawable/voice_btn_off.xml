@@ -1,0 +1,7 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+    <item android:drawable="@drawable/skype_img_buddy_voice_call_focus" android:state_focused="true"/>
+    <item android:drawable="@drawable/skype_img_buddy_voice_call_block" android:state_enabled="false"/>
+    <item android:drawable="@drawable/skype_img_buddy_voice_call_hand_off"/>
+
+</selector>

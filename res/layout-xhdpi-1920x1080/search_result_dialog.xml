@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="488dp"
+    android:layout_height="fill_parent"
+    android:background="@drawable/skype_img_window_bg" >
+
+    <!-- the header ,line and tip part -->
+
+    <TextView
+        android:id="@+id/tv_search_result_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/add_a_skype_contact"
+        android:textColor="@android:color/black"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/iv_search_result_line"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_search_result_header"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/skype_img_login_add_account_line" />
+
+    <TextView
+        android:id="@+id/tv_search_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_search_result_line"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:text="@string/search_result"
+        android:textColor="@android:color/black"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tv_search_result_name"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_search_result"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/tv_search_result"
+        android:textColor="@android:color/black"
+        android:textSize="14dp" />
+
+    <!-- the listview part -->
+
+    <RelativeLayout
+        android:layout_width="450dp"
+        android:layout_height="240dp"
+        android:layout_below="@id/tv_search_result"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/skype_img_add_account_table_bg"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="7dp" >
+
+        <!-- the listview's header -->
+
+        <TextView
+            android:layout_width="155dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/fullname"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="155dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="155dp"
+            android:text="@string/skype_account"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="105dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="330dp"
+            android:text="@string/country"
+            android:textColor="@android:color/black" />
+
+        <!-- the search result -->
+
+        <ListView
+            android:id="@+id/lv_search_result_contact"
+            style="@style/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            android:listSelector="@drawable/tv_focus"
+            android:nextFocusRight="@+id/btn_resultlist_item_pop_add"
+            android:paddingRight="10dp" />
+    </RelativeLayout>
+
+    <!-- the back key -->
+
+    <TextView
+        android:id="@+id/tv_search_result_back"
+        android:layout_width="75dp"
+        android:layout_height="23dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:drawableLeft="@drawable/exit_tx"
+        android:text="@string/back"
+        android:textColor="@android:color/black"
+        android:textSize="14dp"
+        android:gravity="center_vertical" />
+
+    <!-- the functions of the list item,when press the item it will show out -->
+    <!-- the hole view was content of 3 parts -->
+
+    <RelativeLayout
+        android:id="@+id/rel_resultlist_item_pop_main"
+        android:layout_width="285dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/skype_img_window_bg"
+        android:clickable="true" >
+
+        <!-- first part: contact's head image and name and the line -->
+
+        <RelativeLayout
+            android:id="@+id/rel_resultlist_item_pop_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp" >
+
+            <ImageView
+                android:id="@+id/iv_resultlist_item_pop_head_bg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/skype_img_head_bg" />
+
+            <ImageView
+                android:id="@+id/iv_resultlist_item_pop_head"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/skype_img_login_user_head_default" />
+
+            <TextView
+                android:id="@+id/tv_resultlist_item_pop_Mainname"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_resultlist_item_pop_head_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_resultlist_item_pop_head_bg"
+                android:text="Micheal Jackson 0"
+                android:textColor="@android:color/black"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_resultlist_item_item_pop_line"
+                android:layout_width="263dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/iv_resultlist_item_pop_head_bg"
+                android:layout_below="@id/iv_resultlist_item_pop_head_bg"
+                android:layout_marginTop="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/skype_img_login_add_account_line" />
+        </RelativeLayout>
+
+        <!-- second part: the mid functions of the listitem,it will change layout two times -->
+        <!-- 1  skype name,language ,location. -->
+
+        <RelativeLayout
+            android:id="@+id/rel_resultlist_item_pop_midAdd"
+            android:layout_width="fill_parent"
+            android:layout_height="210dp"
+            android:layout_below="@id/rel_resultlist_item_pop_top"
+            android:layout_margin="15dp"
+            android:background="@drawable/skype_img_window_bg"
+            android:padding="15dp" >
+
+            <!-- skypename -->
+
+            <TextView
+                android:id="@+id/tv_resultlist_item_pop_skypename_Tip"
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:text="@string/skype_name"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_resultlist_item_pop_skypename"
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/tv_resultlist_item_pop_skypename_Tip"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_resultlist_item_pop_skypename_Tip"
+                android:singleLine="true"
+                android:textColor="@android:color/darker_gray" />
+
+            <!-- language -->
+
+            <TextView
+                android:id="@+id/tv_resultlist_item_pop_language_Tip"
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/tv_resultlist_item_pop_skypename_Tip"
+                android:layout_marginTop="10dp"
+                android:text="@string/language"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_resultlist_item_pop_language"
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@id/tv_resultlist_item_pop_skypename"
+                android:layout_below="@id/tv_resultlist_item_pop_skypename"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/darker_gray" />
+            <!-- location -->
+
+            <TextView
+                android:id="@+id/tv_resultlist_item_pop_location_Tip"
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/tv_resultlist_item_pop_language_Tip"
+                android:layout_marginTop="10dp"
+                android:text="@string/location"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_resultlist_item_pop_location"
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:layout_alignLeft="@id/tv_resultlist_item_pop_language"
+                android:layout_below="@id/tv_resultlist_item_pop_language"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/darker_gray" />
+
+            <!-- already in contactlist tip -->
+
+            <TextView
+                android:id="@+id/tv_resultlist_item_pop_alreadyIn_Tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_resultlist_item_pop_location_Tip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/btn_resultlist_item_pop_add"
+                android:layout_width="105dp"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_on"
+                android:nextFocusDown="@id/btn_resultlist_item_pop_add"
+                android:nextFocusLeft="@id/btn_resultlist_item_pop_add"
+                android:nextFocusRight="@id/btn_resultlist_item_pop_add"
+                android:nextFocusUp="@id/btn_resultlist_item_pop_add"
+                android:text="@string/_add_contact"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+        <!-- 2  request ,send,cancel. -->
+
+        <RelativeLayout
+            android:id="@+id/rel_resultlist_item_pop_midSend"
+            android:layout_width="fill_parent"
+            android:layout_height="210dp"
+            android:layout_below="@id/rel_resultlist_item_pop_top"
+            android:layout_margin="15dp"
+            android:background="@drawable/skype_img_window_bg"
+            android:padding="20dp" >
+
+            <EditText
+                android:id="@+id/et_resultlist_item_pop_request"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:background="@drawable/skype_input"
+                android:gravity="top"
+                android:imeOptions="actionDone"
+                android:paddingLeft="5dp"
+                android:text="@string/request_to_add"
+                android:textColor="@android:color/black"
+                android:textSize="14dp" 
+                android:inputType="textNoSuggestions|textMultiLine"
+                android:singleLine="false"/>
+
+            <Button
+                android:id="@+id/btn_resultlist_item_pop_send"
+                android:layout_width="105dp"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_off"
+                android:nextFocusDown="@id/btn_resultlist_item_pop_send"
+                android:nextFocusLeft="@id/btn_resultlist_item_pop_send"
+                android:nextFocusRight="@+id/btn_resultlist_item_pop_cancel"
+                android:nextFocusUp="@id/et_resultlist_item_pop_request"
+                android:text="@string/send"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/btn_resultlist_item_pop_cancel"
+                android:layout_width="105dp"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_off"
+                android:nextFocusDown="@id/btn_resultlist_item_pop_cancel"
+                android:nextFocusLeft="@id/btn_resultlist_item_pop_send"
+                android:nextFocusRight="@id/btn_resultlist_item_pop_cancel"
+                android:nextFocusUp="@id/et_resultlist_item_pop_request"
+                android:text="@string/cancel"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+        <!-- third part -->
+
+        <TextView
+            android:id="@+id/tv_resultlist_item_pop_back"
+            android:layout_width="75dp"
+            android:layout_height="23dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/exit_tx"
+            android:text="@string/back"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

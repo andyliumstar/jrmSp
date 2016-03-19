@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/usrAc_conactlist_fragment_Rel"
+    android:layout_width="fill_parent"
+    android:layout_height="505dp" 
+    android:paddingRight="20dp">
+
+    <!-- the img tab to show the four functions at the left of the activity -->
+
+    <ImageView
+        android:id="@+id/options_fragment_optiontabIm"
+        android:layout_width="wrap_content"
+        android:layout_height="505dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/skype_img_tab_l4" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="505dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/skype_img_contact_list_bg"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/tv_options_fragment_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:text="@string/options"
+            android:textColor="@android:color/black"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/tv_options_fragment_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_options_fragment_header"
+            android:layout_marginTop="20dp"
+            android:text="@string/option_page"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

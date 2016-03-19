@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_signOrCr"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@drawable/skype_img_login_bg" >
+    
+    <TextView
+        android:id="@+id/tv_signOrCr_signorcreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/sign_or_create"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/btn_signOrCr_signin"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/tv_signOrCr_signorcreate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/button_off"
+        android:text="@string/signin"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_signOrCr_create"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/btn_signOrCr_signin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_off"
+        android:text="@string/create_an_account"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

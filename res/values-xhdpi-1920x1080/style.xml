@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="dialog_dim" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="dialog_light" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    
+    <style name="activity_dialog" parent="@android:style/Theme.Dialog">  
+        <item name="android:backgroundDimEnabled">false</item> 	
+        <item name="android:windowNoTitle">true</item> 
+		<item name="android:windowBackground">@android:color/transparent</item>	                 
+	</style>
+
+    <style name="listview" parent="android:Widget.ListView.White">
+        <item name="android:scrollbarTrackVertical">@drawable/skype_img_scroll_bg</item>
+        <item name="android:scrollbarThumbVertical">@drawable/skype_img_scroll_bar</item>
+        <item name="android:scrollbarStyle">outsideInset</item>
+        <item name="android:fadeScrollbars">false</item>
+        <item name="android:scrollbarFadeDuration">0</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:divider">#FFCC00</item>
+    </style>
+
+    <style name="contactlistTv" parent="android:Widget.TextView">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">23dp</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:layout_marginLeft">7dp</item>
+        <item name="android:layout_marginRight">7dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/tv_focus</item>
+    </style>
+
+    <style name="optionsTv" parent="android:Widget.TextView">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">@drawable/tv_focus</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_marginTop">13dp</item>
+        <item name="android:paddingLeft">26dp</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="optionsFragmentTv" parent="android:Widget.TextView">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_marginTop">13dp</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="usrStateTv" parent="android:Widget.TextView">
+        <item name="android:layout_width">142dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/tv_focus</item>
+    </style>
+
+    <style name="generalsetSp" parent="android:Widget.Spinner">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:textSize">11dp</item>
+        <item name="android:background">@drawable/drop_down</item>
+        <item name="android:entries">@array/offon</item>
+        <item name="android:paddingLeft">7dp</item>
+    </style>
+
+    <style name="callsetSp" parent="android:Widget.Spinner">
+        <item name="android:layout_width">105dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_marginLeft">19dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:entries">@array/offon</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/drop_down</item>
+    </style>
+
+    <style name="phoneTv" parent="android:Widget.TextView">
+        <item name="android:layout_width">105dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/drop_down</item>
+    </style>
+
+    <style name="passwordEt" parent="@android:style/Widget.EditText">
+        <item name="android:password">true</item>
+        <item name="android:maxLength">20</item>
+        <item name="android:hint">@string/passwordhint</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+
+    <style name="createAccountEt" parent="@android:style/Widget.EditText">
+        <item name="android:layout_width">330dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:background">@drawable/skype_input</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">textNoSuggestions</item>
+    </style>
+    
+    <style name="UserProfileEt" parent="@android:style/Widget.EditText">
+        <item name="android:layout_width">337dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:hint">@string/passwordhint</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:background">@drawable/skype_input</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">textNoSuggestions</item>
+    </style>
+
+    <style name="conferenceIv" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:background">@drawable/skype_img_login_user_head_default</item>
+    </style>
+
+    <style name="conferenceTv" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">113dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+</resources>

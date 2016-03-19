@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_welcome"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/skype_img_login_bg" >
+    
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/welcome"
+        android:textSize="35dp" />
+
+    <ImageView
+        android:id="@+id/iv_welcome_logo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/tv_welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/tv_welcome_start"
+        android:layout_width="650dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_welcome_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:gravity="center_horizontal"
+        android:text="@string/start_tip"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btn_welcome_start"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/tv_welcome_start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_on"
+        android:text="@string/get_start"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/conference_item6"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/iv_conference_item6_1"
+        style="@style/conferenceIv"
+        android:layout_marginLeft="110dp" />
+
+    <TextView
+        android:id="@+id/tv_conference_item6_1"
+        style="@style/conferenceTv"
+        android:layout_alignLeft="@id/iv_conference_item6_1"
+        android:layout_below="@id/iv_conference_item6_1"/>
+
+    <ImageView
+        android:id="@+id/iv_conference_item6_2"
+        style="@style/conferenceIv"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/iv_conference_item6_1" />
+
+    <TextView
+        android:id="@+id/tv_conference_item6_2"
+        style="@style/conferenceTv"
+        android:layout_alignLeft="@id/iv_conference_item6_2"
+        android:layout_below="@id/iv_conference_item6_2"/>
+
+    <ImageView
+        android:id="@+id/iv_conference_item6_3"
+        style="@style/conferenceIv"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/iv_conference_item6_2" />
+
+    <TextView
+        android:id="@+id/tv_conference_item6_3"
+        style="@style/conferenceTv"
+        android:layout_alignLeft="@id/iv_conference_item6_3"
+        android:layout_below="@id/iv_conference_item6_3"/>
+
+    <ImageView
+        android:id="@+id/iv_conference_item6_4"
+        style="@style/conferenceIv"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/iv_conference_item6_3" />
+
+    <TextView
+        android:id="@+id/tv_conference_item6_4"
+        style="@style/conferenceTv"
+        android:layout_alignLeft="@id/iv_conference_item6_4"
+        android:layout_below="@id/iv_conference_item6_4"/>
+
+    <ImageView
+        android:id="@+id/iv_conference_item6_5"
+        style="@style/conferenceIv"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/iv_conference_item6_4" />
+
+    <TextView
+        android:id="@+id/tv_conference_item6_5"
+        style="@style/conferenceTv"
+        android:layout_alignLeft="@id/iv_conference_item6_5"
+        android:layout_below="@id/iv_conference_item6_5"/>
+
+    <ImageView
+        android:id="@+id/iv_conference_item6_6"
+        style="@style/conferenceIv"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/iv_conference_item6_5" />
+
+    <TextView
+        android:id="@+id/tv_conference_item6_6"
+        style="@style/conferenceTv"
+        android:layout_alignLeft="@id/iv_conference_item6_6"
+        android:layout_below="@id/iv_conference_item6_6"/>
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/conference_item1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/iv_conference_item1_1"
+        style="@style/conferenceIv"
+        android:layout_marginLeft="540dp" />
+
+    <TextView
+        android:id="@+id/tv_conference_item1_1"
+        style="@style/conferenceTv"
+        android:layout_alignLeft="@id/iv_conference_item1_1"
+        android:layout_below="@id/iv_conference_item1_1" />
+
+</RelativeLayout>

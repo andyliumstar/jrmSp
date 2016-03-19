@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/skype_img_login_bg" >
+
+
+    <ImageView
+        android:id="@+id/iv_pstncall_remote_video"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/skype_img_call_control_local_default_16_9" />
+
+    <ImageView
+        android:id="@+id/iv_pstncall_local_video"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/skype_img_call_control_local_default_16_9" />
+    
+    
+    <!-- top view :duration and logo -->
+
+    <RelativeLayout
+        android:id="@+id/rel_pstncall_top"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp" >
+
+        <TextView
+            android:id="@+id/tv_pstncall_calldurationTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="500dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/call_duration"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+        <com.jrm.skype.view.SKTimerTextView
+            android:id="@+id/tv_pstncall_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/tv_pstncall_calldurationTip"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/iv_pstncall_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_pstncall_calldurationTip"
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="200dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/skype_img_call_line" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/skype_img_call_skypelogo" />
+    </RelativeLayout>
+
+    <!-- two text view for name -->
+
+    <TextView
+        android:id="@+id/tv_pstncall_remote_video_name"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_pstncall_remote_video"
+        android:layout_alignLeft="@id/iv_pstncall_remote_video"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_pstncall_local_video_name"
+        android:layout_width="470dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_pstncall_local_video"
+        android:layout_alignLeft="@id/iv_pstncall_local_video"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/rel_pstncall_normal_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/skype_img_call_control_black_bg"
+        android:paddingBottom="15dp" >
+
+        <!-- dial pad -->
+        <Button
+            android:id="@+id/btn_pstncall_dial_pad"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="145dp"
+            android:background="@drawable/button_dial_pad" />
+
+        <TextView
+            android:id="@+id/tv_pstncall_dial_pad"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/btn_pstncall_dial_pad"
+            android:layout_below="@id/btn_pstncall_dial_pad"
+            android:gravity="center_horizontal"
+            android:text="@string/dial"
+            android:textSize="13dp" />
+        <!-- hold -->
+
+        <Button
+            android:id="@+id/btn_pstncall_hold_resume"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="215dp"
+            android:layout_toRightOf="@id/btn_pstncall_dial_pad" />
+
+        <TextView
+            android:id="@+id/tv_pstncall_hold_resume"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/btn_pstncall_hold_resume"
+            android:layout_below="@id/btn_pstncall_hold_resume"
+            android:gravity="center_horizontal"
+            android:textSize="13dp" />
+        <!-- mute -->
+
+        <Button
+            android:id="@+id/btn_pstncall_mute"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="215dp"
+            android:layout_toRightOf="@id/btn_pstncall_hold_resume" />
+
+        <TextView
+            android:id="@+id/tv_pstncall_mute"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/btn_pstncall_mute"
+            android:layout_below="@id/btn_pstncall_mute"
+            android:gravity="center_horizontal"
+            android:textSize="13dp" />
+         
+        <!-- end call -->
+
+        <Button
+            android:id="@+id/btn_pstncall_end_call"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="215dp"
+            android:layout_toRightOf="@id/btn_pstncall_mute"
+            android:background="@drawable/button_end_call" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/btn_pstncall_end_call"
+            android:layout_below="@id/btn_pstncall_end_call"
+            android:gravity="center_horizontal"
+            android:text="@string/endcall"
+            android:textSize="13dp" />
+    </RelativeLayout>
+
+  
+    <ImageView
+        android:id="@+id/iv_pstncall_pup_pause"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/skype_img_call_control_popup_call_pause" 
+        android:visibility="gone"/>
+
+</RelativeLayout>

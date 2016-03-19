@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/skype_img_add_popup_notice_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:text="@string/incomingcall"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_incomingcall_name"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:singleLine="true"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_incomingcall_notify"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"
+            android:textSize="18dp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_incomingcall_btns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_incomingcall_name"
+            android:layout_below="@id/tv_incomingcall_name"
+            android:layout_marginTop="10dp" >
+
+            <!-- video btn -->
+
+            <Button
+                android:id="@+id/btn_incomingcall_video"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/incoming_call_video" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/btn_incomingcall_video"
+                android:layout_below="@id/btn_incomingcall_video"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/video"
+                android:textSize="18dp" />
+
+            <!-- voice btn -->
+
+            <Button
+                android:id="@+id/btn_incomingcall_voice"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@id/btn_incomingcall_video"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btn_incomingcall_video"
+                android:background="@drawable/incoming_call_voice" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/btn_incomingcall_voice"
+                android:layout_below="@id/btn_incomingcall_voice"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/voice"
+                android:textSize="18dp" />
+
+            <!-- decline btn -->
+
+            <Button
+                android:id="@+id/btn_incomingcall_decline"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@id/btn_incomingcall_voice"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/btn_incomingcall_voice"
+                android:background="@drawable/incoming_call_decline" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/btn_incomingcall_decline"
+                android:layout_below="@id/btn_incomingcall_decline"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/decline"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

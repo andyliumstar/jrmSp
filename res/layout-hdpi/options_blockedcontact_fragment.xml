@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="577dp" >
+
+    <!-- the img tab to show the four funtions at the left of the activity -->
+
+    <ImageView
+        android:id="@+id/iv_blockedcontacts_fragment_optiontab"
+        android:layout_width="70dp"
+        android:layout_height="577dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/skype_img_option_tab_l6" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="574dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/skype_img_option_buddy_bg" >
+
+        <!-- top tip -->
+
+        <TextView
+            android:id="@+id/tv_blockedcontacts_fragment_tip"
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/block_tip"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <!-- block this people -->
+
+        <TextView
+            android:id="@+id/tv_blockedcontacts_fragment_unblock"
+            android:layout_width="450dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@id/tv_blockedcontacts_fragment_tip"
+            android:layout_below="@id/tv_blockedcontacts_fragment_tip"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/drop_down"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:nextFocusDown="@+id/lv_blockedcontacts_fragment_blockedpeople"
+            android:nextFocusLeft="@+id/tv_options_blockedcontacts"
+            android:nextFocusUp="@id/tv_blockedcontacts_fragment_unblock"
+            android:paddingLeft="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_blockedcontacts_fragment_block"
+            android:layout_width="140dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/tv_blockedcontacts_fragment_unblock"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/tv_blockedcontacts_fragment_unblock"
+            android:background="@drawable/button_off"
+            android:nextFocusDown="@id/btn_blockedcontacts_fragment_block"
+            android:nextFocusUp="@id/btn_blockedcontacts_fragment_block"
+            android:text="@string/block_people"
+            android:textColor="@android:color/white" />
+
+        <!-- blocked people -->
+
+        <TextView
+            android:id="@+id/tv_blockedcontacts_fragment_blockedpeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_blockedcontacts_fragment_unblock"
+            android:layout_below="@id/tv_blockedcontacts_fragment_unblock"
+            android:layout_marginTop="25dp"
+            android:text="@string/blocked_people"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_blockedcontacts_fragment_blockedpeople_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_blockedcontacts_fragment_blockedpeople"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/tv_blockedcontacts_fragment_blockedpeople"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <ListView
+            android:id="@+id/lv_blockedcontacts_fragment_blockedpeople"
+            android:layout_width="450dp"
+            android:layout_height="312dp"
+            android:layout_alignLeft="@id/tv_blockedcontacts_fragment_blockedpeople"
+            android:layout_below="@id/tv_blockedcontacts_fragment_blockedpeople"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/skype_input"
+            android:divider="#FFCC00"
+            android:listSelector="@drawable/tv_focus"
+            android:nextFocusDown="@id/lv_blockedcontacts_fragment_blockedpeople"
+            android:nextFocusLeft="@+id/tv_options_blockedcontacts" />
+
+        <Button
+            android:id="@+id/btn_blockedcontacts_fragment_unblock"
+            android:layout_width="140dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/lv_blockedcontacts_fragment_blockedpeople"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/lv_blockedcontacts_fragment_blockedpeople"
+            android:background="@drawable/button_off"
+            android:nextFocusDown="@id/btn_blockedcontacts_fragment_unblock"
+            android:text="@string/unblock_people"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

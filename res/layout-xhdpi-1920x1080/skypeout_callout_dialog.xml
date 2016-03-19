@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/skypeout_fragment_voice_call_mainRel"
+    android:layout_width="285dp"
+    android:layout_height="379dp"
+    android:background="@drawable/skype_img_window_bg" >
+
+    <!-- 1: call phone number -->
+
+    <RelativeLayout
+        android:id="@+id/rel_skypeout_fragment_voice_call_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+
+        <include layout="@layout/head_state_name" />
+    </RelativeLayout>
+
+    <!-- 2, voice call connecting animation -->
+
+    <RelativeLayout
+        android:id="@+id/rel_skypeout_fragment_voice_call_mid"
+        android:layout_width="fill_parent"
+        android:layout_height="240dp"
+        android:layout_below="@id/rel_skypeout_fragment_voice_call_top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/skype_img_window_bg" >
+
+        <include layout="@layout/vvcall_connecting" />
+    </RelativeLayout>
+
+    <!-- 3 the bottom funtions exit and vol+,vol- -->
+
+    <RelativeLayout
+        android:id="@+id/rel_contactlist_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp" >
+
+        <include
+            android:id="@+id/titleLayout"
+            layout="@layout/vol_back" />
+    </RelativeLayout>
+
+</RelativeLayout>

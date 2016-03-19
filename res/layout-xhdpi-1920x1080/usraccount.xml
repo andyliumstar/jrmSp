@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="50dp"
+    android:paddingRight="34dp"
+    android:background="@drawable/skype_img_login_bg" >
+<!--  android:background="@drawable/skype_img_contact_list_big_bg" -->  
+    <!-- the usr info at the top of the UI -->
+
+    <RelativeLayout
+        android:id="@+id/rel_usrAc_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp" >
+
+        <ImageView
+            android:id="@+id/iv_usrAc_usrhead"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="3dp"
+            android:background="@drawable/skype_img_head_bg" />
+
+        <ImageView
+            android:id="@+id/iv_usrAc_usrstatus"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignTop="@id/iv_usrAc_usrhead"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/iv_usrAc_usrhead"
+            android:src="@drawable/presenceonline_32x32" />
+
+        <TextView
+            android:id="@+id/tv_usrAc_usrname"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignTop="@id/iv_usrAc_usrstatus"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/iv_usrAc_usrstatus"
+            android:gravity="center_vertical"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_usrAc_usrsig"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignLeft="@id/tv_usrAc_usrname"
+            android:layout_below="@id/tv_usrAc_usrname"
+            android:layout_marginTop="1dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/iv_usrAc_usrcredit"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignBottom="@+id/iv_usrAc_usrhead"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/iv_usrAc_usrhead"
+            android:src="@drawable/skypecredit_32x32" />
+
+        <TextView
+            android:id="@+id/tv_usrAc_usrcredit"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_alignTop="@id/iv_usrAc_usrcredit"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/iv_usrAc_usrcredit"
+            android:gravity="center_vertical"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <!-- the functions of the usr at the mid of the UI -->
+
+    <RelativeLayout
+        android:id="@+id/rel_usrAc_mid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp" >
+        
+        <!-- the left 4 functions -->
+
+        <RelativeLayout
+            android:id="@+id/rel_usrAc_left"
+            android:layout_width="125dp"
+            android:layout_height="380dp" 
+            android:background="@drawable/skype_img_contact_icon_bg"> 
+            <ImageView
+                android:id="@+id/iv_usrAc_contactlist"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/usrac_contactlistim"
+                android:focusable="true" />
+
+            <ImageView
+                android:id="@+id/iv_usrAc_historylist"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_alignLeft="@id/iv_usrAc_contactlist"
+                android:layout_below="@id/iv_usrAc_contactlist"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/usrac_historylistim"
+                android:focusable="true" />
+
+            <ImageView
+                android:id="@+id/iv_usrAc_skypeout"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_alignLeft="@id/iv_usrAc_historylist"
+                android:layout_below="@id/iv_usrAc_historylist"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/usrac_skypeoutim"
+                android:focusable="true" />
+
+            <ImageView
+                android:id="@+id/iv_usrAc_options"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_alignLeft="@id/iv_usrAc_skypeout"
+                android:layout_below="@id/iv_usrAc_skypeout"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/usrac_optionsim"
+                android:nextFocusDown="@id/iv_usrAc_options"
+                android:focusable="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_usrAc_right_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_marginLeft="87dp" >
+ 
+            <!-- add a fragment -->
+        </RelativeLayout>
+        
+    <ProgressBar
+        android:id="@+id/pb_usrAc"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="60dp"
+        android:layout_height="60dp" 
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>    
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_usrAc_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_usrAc_exit"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="3dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/exit_tx"
+            android:gravity="center_vertical"
+            android:text="@string/exit"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_usrAc_addcontact"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@id/tv_usrAc_exit"
+            android:layout_marginRight="23dp"
+            android:layout_toLeftOf="@id/tv_usrAc_exit"
+            android:clickable="true"
+            android:drawableLeft="@drawable/usrac_addcontacttx"
+            android:gravity="center_vertical"
+            android:text="@string/add_contact"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_usrAc_status"
+            android:layout_width="83dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@id/tv_usrAc_addcontact"
+            android:layout_marginRight="23dp"
+            android:layout_toLeftOf="@id/tv_usrAc_addcontact"
+            android:clickable="true"
+            android:drawableLeft="@drawable/usrac_statustx"
+            android:gravity="center_vertical"
+            android:text="@string/status"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_usrAc_request"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@id/tv_usrAc_status"
+            android:layout_marginRight="23dp"
+            android:layout_toLeftOf="@id/tv_usrAc_status"
+            android:clickable="true"
+            android:drawableLeft="@drawable/usrac_requesttx"
+            android:gravity="center_vertical"
+            android:text="@string/contact_request"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+</LinearLayout>

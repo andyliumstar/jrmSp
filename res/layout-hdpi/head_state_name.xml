@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/iv_item_pop_head_bg"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:src="@drawable/skype_img_head_bg" />
+
+    <ImageView
+        android:id="@+id/iv_item_pop_head"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp" />
+
+    <ImageView
+        android:id="@+id/iv_item_pop_state"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/iv_item_pop_head"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/iv_item_pop_head" />
+
+    <TextView
+        android:id="@+id/tv_item_pop_name"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_alignTop="@id/iv_item_pop_state"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/iv_item_pop_state"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/iv_item_pop_line"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/iv_item_pop_head_bg"
+        android:layout_below="@id/iv_item_pop_head_bg"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/skype_img_login_add_account_line" />
+
+</RelativeLayout>

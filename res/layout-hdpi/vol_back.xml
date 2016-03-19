@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/iv_item_pop_vol_up"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/vol_u_im"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_item_pop_vol_down"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@id/iv_item_pop_vol_up"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_item_pop_vol_up"
+        android:background="@drawable/vol_d_im"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_item_pop_vol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_item_pop_vol_down"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_item_pop_vol_down"
+        android:text="@string/vol"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_item_pop_back"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:drawableLeft="@drawable/exit_tx"
+        android:text="@string/back"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+</RelativeLayout>

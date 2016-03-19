@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingRight="40dp" 
+	android:background="@drawable/skype_img_login_bg">
+<!--android:background="@drawable/skype_img_option_bg -->
+    <TextView
+        android:id="@+id/tv_options_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/options"
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/rel_options_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="60dp" >
+
+        <!-- the left 8 funtions -->
+
+        <RelativeLayout
+            android:id="@+id/rel_options_left"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="26dp"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/skype_img_option_icon_bg" >
+
+            <!-- usr profile -->
+
+            <TextView
+                android:id="@+id/tv_options_usrprofile"
+                style="@style/optionsTv"
+                android:drawableLeft="@drawable/skype_img_option_icon_user_profile"
+                android:text="@string/usrprofile"/>
+
+            <!-- change password -->
+
+            <TextView
+                android:id="@+id/tv_options_changepassword"
+                style="@style/optionsTv"
+                android:layout_below="@id/tv_options_usrprofile"
+                android:drawableLeft="@drawable/skype_img_option_icon_change_password"
+                android:text="@string/change_password" />
+
+            <!-- general settings -->
+
+            <TextView
+                android:id="@+id/tv_options_generalSet"
+                style="@style/optionsTv"
+                android:layout_below="@id/tv_options_changepassword"
+                android:drawableLeft="@drawable/skype_img_option_icon_general_settings"
+                android:text="@string/generalset" 
+                android:nextFocusRight="@+id/sp_generalset_fragment_startTVon"/>
+
+            <!-- audio settings -->
+
+            <TextView
+                android:id="@+id/tv_options_audioSet"
+                style="@style/optionsTv"
+                android:layout_below="@id/tv_options_generalSet"
+                android:drawableLeft="@drawable/skype_img_option_icon_audio_settings"
+                android:text="@string/audioset"
+                android:nextFocusRight="@+id/tv_audioset_fragment_speakervol"/>"
+
+            <!-- privacy settings -->
+
+            <TextView
+                android:id="@+id/tv_options_privacySet"
+                style="@style/optionsTv"
+                android:layout_below="@id/tv_options_audioSet"
+                android:drawableLeft="@drawable/skype_img_option_icon_privacy_settings"
+                android:text="@string/privacyset"
+                android:nextFocusRight="@+id/sp_privacyset_fragment_allowcalls" />
+
+            <!-- blocked contacts -->
+
+            <TextView
+                android:id="@+id/tv_options_blockedcontacts"
+                style="@style/optionsTv"
+                android:layout_below="@id/tv_options_privacySet"
+                android:drawableLeft="@drawable/skype_img_option_icon_blocked_contacts"
+                android:text="@string/blocked_contacts" 
+                android:nextFocusRight="@+id/tv_blockedcontacts_fragment_unblock"/>
+
+            <!-- call settings -->
+
+            <TextView
+                android:id="@+id/tv_options_callSet"
+                style="@style/optionsTv"
+                android:layout_below="@id/tv_options_blockedcontacts"
+                android:drawableLeft="@drawable/skype_img_option_icon_call_forwarding"
+                android:text="@string/callset"
+                android:nextFocusRight="@+id/sp_callset_fragment_forward" />
+
+            <!-- about skype -->
+
+            <TextView
+                android:id="@+id/tv_options_aboutSkype"
+                style="@style/optionsTv"
+                android:layout_below="@id/tv_options_callSet"
+                android:drawableLeft="@drawable/skype_img_option_icon_help"
+                android:nextFocusDown="@id/tv_options_aboutSkype"
+                android:text="@string/about_skype" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_options_right_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="225dp">
+            <!-- to add a fragment -->
+            
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="7dp" >
+
+        <include
+            android:id="@+id/titleLayout"
+            layout="@layout/vol_back" />
+
+        <TextView
+            android:id="@+id/tv_item_pop_save"
+            android:layout_width="75dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="105dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/skype_img_btn_b"
+            android:text="@string/save"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

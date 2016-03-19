@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_search_result_list_fullname"
+        android:layout_width="205dp"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_search_result_list_skypeaccount"
+        android:layout_width="205dp"
+        android:layout_height="35dp"
+        android:layout_toRightOf="@id/tv_search_result_list_fullname"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_search_result_list_country"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>

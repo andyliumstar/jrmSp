@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/skype_img_window_bg" >
+
+    <TextView
+        android:id="@+id/tv_signout_signout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="@string/sureto_signout"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn_signout_ok"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/tv_signout_signout"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/button_off"
+        android:text="@string/ok"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_signout_cancel"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@id/btn_signout_ok"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/btn_signout_ok"
+        android:background="@drawable/button_off"
+        android:text="@string/cancel"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/skype_img_window_bg"
+    android:paddingTop="5dp" >
+
+    <TextView
+        android:id="@+id/tv_usrState_online"
+        style="@style/usrStateTv"
+        android:drawableLeft="@drawable/presenceonline_32x32"
+        android:text="@string/online" />
+
+    <TextView
+        android:id="@+id/tv_usrState_away"
+        style="@style/usrStateTv"
+        android:layout_below="@id/tv_usrState_online"
+        android:drawableLeft="@drawable/presenceaway_32x32"
+        android:text="@string/away" />
+
+    <TextView
+        android:id="@+id/tv_usrState_nodisturb"
+        style="@style/usrStateTv"
+        android:layout_below="@id/tv_usrState_away"
+        android:drawableLeft="@drawable/presencedonotdisturb_32x32"
+        android:text="@string/nodisturb" />
+
+    <TextView
+        android:id="@+id/tv_usrState_invisiable"
+        style="@style/usrStateTv"
+        android:layout_below="@id/tv_usrState_nodisturb"
+        android:drawableLeft="@drawable/presenceinvisible_32x32"
+        android:text="@string/invisible" />
+
+    <Button
+        android:id="@+id/btn_usrState_signout"
+        android:layout_width="142dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/tv_usrState_invisiable"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_signout"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="23dp"
+        android:text="@string/signout"
+        android:textColor="@android:color/black"
+        android:textSize="14dp" />
+
+</RelativeLayout>

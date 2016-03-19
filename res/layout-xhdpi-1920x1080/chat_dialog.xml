@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <!-- the chat view was content of 3 parts -->
+
+    <LinearLayout
+        android:id="@+id/lil_chat_main"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/skype_img_window_bg"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <!-- first part: contact's head image and name and state -->
+
+        <RelativeLayout
+            android:id="@+id/rel_chat_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/iv_chat_head_bg"
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:src="@drawable/skype_img_head_bg" />
+
+            <ImageView
+                android:id="@+id/iv_chat_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/skype_img_login_user_head_default" />
+
+            <ImageView
+                android:id="@+id/iv_chat_status"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignTop="@id/iv_chat_head"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_chat_head"
+                android:src="@drawable/presenceoffline_32x32" />
+
+            <ImageView
+                android:id="@+id/iv_chat_wait"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/iv_chat_status"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/iv_chat_head" />
+
+            <TextView
+                android:id="@+id/tv_chat_name"
+                android:layout_width="150dp"
+                android:layout_height="23dp"
+                android:singleLine="true"
+                android:layout_alignTop="@id/iv_chat_status"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/iv_chat_status"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <!-- second part: message body and a edittext -->
+
+        <LinearLayout
+            android:id="@+id/lil_chat_mid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/lv_chat_message"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/skype_img_window_bg"
+                android:cacheColorHint="#00000000"
+                android:divider="#FFCC00"
+                android:listSelector="@drawable/tv_focus"
+                android:padding="10dp"
+                android:transcriptMode="alwaysScroll" />
+
+            <EditText
+                android:id="@+id/et_chat_message"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/skype_msg_input"
+                android:nextFocusDown="@+id/btn_chat_enter"
+                android:paddingLeft="5dp"
+                android:paddingBottom="12dp"
+                android:gravity="center_vertical"
+                android:singleLine="true" 
+				android:inputType="textNoSuggestions"
+				android:textSize="13dp"/>
+        </LinearLayout>
+
+        <!-- third part:3 buttons -->
+
+        <LinearLayout
+            android:id="@+id/lil_chat_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_chat_enter"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_off"
+                android:text="@string/enter"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_chat_close"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/button_off"
+                android:text="@string/close"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_chat_history"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/button_off"
+                android:text="@string/history1"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- chat history : a textview and a listview -->
+
+    <LinearLayout
+        android:id="@+id/lil_chat_history"
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/skype_img_window_bg"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <TextView
+            android:id="@+id/tv_chat_history_listheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history:"
+            android:textColor="@android:color/black" />
+
+        <!-- the chat history list -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="312dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/skype_img_window_bg"
+            android:padding="15dp" >
+
+            <ListView
+                android:id="@+id/lv_chat_history"
+                style="@style/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@drawable/tv_focus"
+                android:paddingRight="5dp"
+                android:transcriptMode="alwaysScroll" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp" >
+
+            <Button
+                android:id="@+id/btn_chat_history_last"
+                android:layout_width="53dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_off"
+                android:text="@string/last_page"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_chat_history_pageindex"
+                android:layout_width="53dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/btn_chat_history_next"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_off"
+                android:text="@string/next_page"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_chat_history_delete"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="23dp"
+                android:background="@drawable/button_off"
+                android:text="@string/delete_all"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

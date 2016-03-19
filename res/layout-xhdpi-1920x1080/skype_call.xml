@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/skype_img_login_bg" >
+    <!-- two video bg -->
+    <ImageView
+        android:layout_width="353dp"
+        android:layout_height="203dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="95dp"
+        android:layout_marginLeft="23dp"
+        android:background="@drawable/skype_img_call_control_contact_mask_bg" />
+
+    <ImageView
+        android:layout_width="545dp"
+        android:layout_height="311dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="95dp"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/skype_img_call_control_contact_mask_bg" />
+<!-- two video surface w,h will set in the code -->
+    <SurfaceView
+        android:id="@+id/sv_incall_remote_video"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <SurfaceView
+        android:id="@+id/sv_incall_local_video"
+        android:layout_width="0dp"
+        android:layout_height="0dp"  />
+    
+    <ProgressBar
+        android:id="@+id/pb_incall_remote_normal"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="60dp"
+        android:layout_height="60dp" 
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="113dp"
+        android:layout_alignTop="@id/sv_incall_remote_video"
+        android:layout_alignLeft="@id/sv_incall_remote_video"/>
+    
+    <ProgressBar
+        android:id="@+id/pb_incall_remote_full"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="60dp"
+        android:layout_height="60dp" 
+        android:layout_centerInParent="true"/>
+    
+    <ProgressBar
+        android:id="@+id/pb_incall_local_normal"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="38dp"
+        android:layout_height="38dp" 
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="75dp"
+        android:layout_alignTop="@id/sv_incall_local_video"
+        android:layout_alignLeft="@id/sv_incall_local_video"/>
+    
+    <ProgressBar
+        android:id="@+id/pb_incall_local_full"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="38dp"
+        android:layout_height="38dp" 
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="38dp"
+        android:layout_alignTop="@id/sv_incall_local_video"
+        android:layout_alignLeft="@id/sv_incall_local_video"/>
+
+    <!-- top view :duration and logo -->
+
+    <RelativeLayout
+        android:id="@+id/rel_incall_top"
+        android:layout_width="fill_parent"
+        android:layout_height="68dp" >
+
+        <TextView
+            android:id="@+id/tv_incall_calldurationTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="375dp"
+            android:layout_marginTop="23dp"
+            android:text="@string/call_duration"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+
+        <com.jrm.skype.view.SKTimerTextView
+            android:id="@+id/tv_incall_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="23dp"
+            android:layout_toRightOf="@id/tv_incall_calldurationTip"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/iv_incall_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_incall_calldurationTip"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/skype_img_call_line" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/skype_img_call_skypelogo" />
+    </RelativeLayout>
+
+    <!-- two text view for name -->
+
+    <TextView
+        android:id="@+id/tv_incall_remote_video_name"
+        android:layout_width="525dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sv_incall_remote_video"
+        android:layout_alignLeft="@id/sv_incall_remote_video"
+        android:layout_marginBottom="23dp"
+        android:gravity="center_horizontal"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tv_incall_local_video_name"
+        android:layout_width="353dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sv_incall_local_video"
+        android:layout_alignLeft="@id/sv_incall_local_video"
+        android:layout_marginBottom="23dp"
+        android:gravity="center_horizontal"
+        android:textSize="15dp" />
+
+    <!-- normal screen 5 buttons:stop video,hold,mute,full screen ,end call -->
+
+    <RelativeLayout
+        android:id="@+id/rel_incall_normal_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/skype_img_call_control_black_bg"
+        android:paddingBottom="15dp" >
+
+        <!-- stop video -->
+
+        <Button
+            android:id="@+id/btn_incall_stop_start_video"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="140dp" />
+
+        <TextView
+            android:id="@+id/tv_incall_stop_start_video"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/btn_incall_stop_start_video"
+            android:layout_below="@id/btn_incall_stop_start_video"
+            android:gravity="center_horizontal"
+            android:textSize="10dp" />
+        <!-- hold -->
+
+        <Button
+            android:id="@+id/btn_incall_hold_resume"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="165dp"
+            android:layout_toRightOf="@id/btn_incall_stop_start_video"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_incall_hold_resume"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/btn_incall_hold_resume"
+            android:layout_below="@id/btn_incall_hold_resume"
+            android:gravity="center_horizontal"
+            android:textSize="10dp"
+            android:visibility="gone" />
+        <!-- mute -->
+
+        <Button
+            android:id="@+id/btn_incall_mute"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="165dp"
+            android:layout_toRightOf="@id/btn_incall_hold_resume" />
+
+        <TextView
+            android:id="@+id/tv_incall_mute"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/btn_incall_mute"
+            android:layout_below="@id/btn_incall_mute"
+            android:gravity="center_horizontal"
+            android:textSize="10dp" />
+        <!-- full screen -->
+
+        <Button
+            android:id="@+id/btn_incall_full_screen"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="165dp"
+            android:layout_toRightOf="@id/btn_incall_mute"
+            android:background="@drawable/button_full_screen" />
+
+        <TextView
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/btn_incall_full_screen"
+            android:layout_below="@id/btn_incall_full_screen"
+            android:gravity="center_horizontal"
+            android:text="@string/full_screen"
+            android:textSize="10dp" />
+        <!-- end call -->
+
+        <Button
+            android:id="@+id/btn_incall_end_call"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="165dp"
+            android:layout_toRightOf="@id/btn_incall_full_screen"
+            android:background="@drawable/button_end_call" />
+
+        <TextView
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/btn_incall_end_call"
+            android:layout_below="@id/btn_incall_end_call"
+            android:gravity="center_horizontal"
+            android:text="@string/endcall"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <!-- full screen 5 buttons :stop video,mute,hold,full screen,end call -->
+
+    <LinearLayout
+        android:id="@+id/lil_incall_fullSrceen_buttom_funtion"
+        android:layout_width="450dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#86222222"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <!-- stop video -->
+
+        <Button
+            android:id="@+id/btn_incall_fullSrceen_stop_start_video"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp" />
+        <!-- hold -->
+
+        <Button
+            android:id="@+id/btn_incall_fullSrceen_hold_resume"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="68dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone" />
+        <!-- mute -->
+
+        <Button
+            android:id="@+id/btn_incall_fullSrceen_mute"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="68dp"
+            android:layout_marginTop="20dp" />
+        <!-- normal screen -->
+
+        <Button
+            android:id="@+id/btn_incall_fullSrceen_normal_screen"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="68dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_normal_screen" />
+        <!-- end call -->
+
+        <Button
+            android:id="@+id/btn_incall_fullSrceen_end_call"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="68dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_end_call" />
+    </LinearLayout>
+
+    <!-- pause image -->
+
+    <ImageView
+        android:id="@+id/iv_incall_pup_pause"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/skype_img_call_control_popup_call_pause" 
+        android:visibility="gone"/>
+
+</RelativeLayout>

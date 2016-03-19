@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="577dp" >
+
+    <ImageView
+        android:id="@+id/iv_changepassword_fragment_optiontab"
+        android:layout_width="70dp"
+        android:layout_height="577dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/skype_img_option_tab_l2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="574dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/skype_img_option_buddy_bg" >
+
+        <!-- enter current password -->
+
+        <TextView
+            android:id="@+id/tv_changepassword_fragment_entercurpw"
+            style="@style/optionsFragmentTv"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center_vertical"
+            android:text="@string/enter_curpw" />
+
+        <EditText
+            android:id="@+id/et_changepassword_fragment_entercurpw"
+            style="@style/passwordEt"
+            android:layout_width="450dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@id/tv_changepassword_fragment_entercurpw"
+            android:layout_below="@id/tv_changepassword_fragment_entercurpw"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/skype_input"
+            android:nextFocusDown="@+id/et_changepassword_fragment_enternewpw"
+            android:nextFocusUp="@id/et_changepassword_fragment_entercurpw" />
+
+        <!-- enter new password -->
+
+        <TextView
+            android:id="@+id/tv_changepassword_fragment_enternewpw"
+            style="@style/optionsFragmentTv"
+            android:layout_width="wrap_content"
+            android:layout_alignLeft="@id/et_changepassword_fragment_entercurpw"
+            android:layout_below="@id/et_changepassword_fragment_entercurpw"
+            android:gravity="center_vertical"
+            android:text="@string/enter_newpw" />
+
+        <EditText
+            android:id="@+id/et_changepassword_fragment_enternewpw"
+            style="@style/passwordEt"
+            android:layout_width="450dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@id/tv_changepassword_fragment_enternewpw"
+            android:layout_below="@id/tv_changepassword_fragment_enternewpw"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/skype_input"
+            android:nextFocusDown="@+id/et_changepassword_fragment_re_enternewpw"
+            android:nextFocusLeft="@+id/tv_options_changepassword"
+            android:nextFocusUp="@id/et_changepassword_fragment_entercurpw" />
+
+        <!-- re-enter new password -->
+
+        <TextView
+            android:id="@+id/tv_changepassword_fragment_re_enternewpw"
+            style="@style/optionsFragmentTv"
+            android:layout_width="wrap_content"
+            android:layout_alignLeft="@id/et_changepassword_fragment_enternewpw"
+            android:layout_below="@id/et_changepassword_fragment_enternewpw"
+            android:gravity="center_vertical"
+            android:text="@string/re_enter_newpw" />
+
+        <EditText
+            android:id="@+id/et_changepassword_fragment_re_enternewpw"
+            style="@style/passwordEt"
+            android:layout_width="450dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@id/tv_changepassword_fragment_re_enternewpw"
+            android:layout_below="@id/tv_changepassword_fragment_re_enternewpw"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/skype_input"
+            android:nextFocusLeft="@+id/tv_options_changepassword" />
+
+        <Button
+            android:id="@+id/btn_changepassword_fragment_apply"
+            android:layout_width="140dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@id/et_changepassword_fragment_re_enternewpw"
+            android:layout_below="@id/et_changepassword_fragment_re_enternewpw"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_off"
+            android:nextFocusDown="@id/btn_changepassword_fragment_apply"
+            android:nextFocusLeft="@+id/tv_options_changepassword"
+            android:text="@string/apply"
+            android:textColor="@android:color/white" />
+
+        <!-- input tip,if input is wrong -->
+
+        <ImageView
+            android:id="@+id/iv_changepassword_fragment_password_wrong"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignRight="@id/et_changepassword_fragment_enternewpw"
+            android:layout_alignTop="@id/et_changepassword_fragment_enternewpw"
+            android:layout_marginRight="27dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/err_icon"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_changepassword_fragment_repassword_wrong"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignRight="@id/et_changepassword_fragment_re_enternewpw"
+            android:layout_alignTop="@id/et_changepassword_fragment_re_enternewpw"
+            android:layout_marginRight="27dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/err_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_changepassword_fragment_password_wrong"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignRight="@id/et_changepassword_fragment_enternewpw"
+            android:layout_alignTop="@id/et_changepassword_fragment_enternewpw"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/skype_img_tips_bg"
+            android:gravity="bottom"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="15dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_changepassword_fragment_repassword_wrong"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignRight="@id/et_changepassword_fragment_re_enternewpw"
+            android:layout_alignTop="@id/et_changepassword_fragment_re_enternewpw"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/skype_img_tips_bg"
+            android:gravity="bottom"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="15dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

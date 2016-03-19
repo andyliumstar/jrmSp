@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_signing"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@drawable/skype_img_login_bg" >
+    
+    <RelativeLayout
+        android:layout_width="337dp"
+        android:layout_height="225dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/skype_img_window_bg" >
+
+        <ImageView
+            android:id="@+id/iv_signing_signing"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/signinganimation" />
+
+        <TextView
+            android:id="@+id/tv_signing_signing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_signing_signing"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:text="@string/signing"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btn_signing_cancel"
+            android:layout_width="105dp"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_on"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+    <!-- the buttom back -->
+
+    <TextView
+        android:id="@+id/tv_signing_back"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:drawableLeft="@drawable/skype_img_btn_exit"
+        android:text="@string/back"
+        android:textColor="@android:color/black"
+        android:textSize="15dp"
+        android:gravity="center_vertical" />
+
+</RelativeLayout>

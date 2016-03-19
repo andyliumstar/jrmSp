@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+    <item android:drawable="@drawable/skype_img_textview_focus" android:state_focused="true"/>
+
+</selector>

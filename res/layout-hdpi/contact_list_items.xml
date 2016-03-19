@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="91dp"
+    android:paddingBottom="12dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="8dp" >
+
+    <ImageView
+        android:id="@+id/iv_contact_listitem_head"
+        android:layout_width="71dp"
+        android:layout_height="71dp"
+        android:padding="3dp"
+        android:background="@drawable/skype_img_head_bg" />
+
+    <ImageView
+        android:id="@+id/iv_contact_listitem_state"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@id/iv_contact_listitem_head"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_contact_listitem_head" />
+
+    <TextView
+        android:id="@+id/tv_contact_listitem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/iv_contact_listitem_state"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_contact_listitem_state"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_contact_listitem_sig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_contact_listitem_name"
+        android:layout_below="@id/tv_contact_listitem_name"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+</RelativeLayout>

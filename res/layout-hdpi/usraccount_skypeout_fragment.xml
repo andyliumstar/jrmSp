@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="505dp" 
+    android:paddingRight="20dp">
+
+    <ImageView
+        android:id="@+id/iv_skypeout_fragment_optiontab"
+        android:layout_width="wrap_content"
+        android:layout_height="505dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/skype_img_tab_l3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="505dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/skype_img_contact_list_bg"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_skypeout_fragment_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/dialer"
+            android:textColor="@android:color/black"
+            android:textSize="22dp" />
+
+        <!-- the main view to call:coutrycode,phone number,and voice call -->
+
+        <TextView
+            android:id="@+id/tv_skypeout_fragment_inputcountrycode_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_skypeout_fragment_header"
+            android:layout_marginTop="60dp"
+            android:text="@string/input_country_code"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_skypeout_fragment_inputcountrycode"
+            android:layout_width="370dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/tv_skypeout_fragment_inputcountrycode_tip"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/drop_down"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:nextFocusLeft="@+id/iv_usrAc_skypeout"
+            android:nextFocusUp="@id/tv_skypeout_fragment_inputcountrycode"
+            android:paddingLeft="5dp"
+            android:text="@string/select_one"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_skypeout_fragment_inputphonenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_skypeout_fragment_inputcountrycode"
+            android:layout_marginTop="30dp"
+            android:text="@string/input_phone_number"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_skypeout_fragment_countrycode_selected"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/tv_skypeout_fragment_inputphonenumber"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/skype_input"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+        <com.jrm.skype.view.SKEditText
+            android:id="@+id/et_skypeout_fragment_input_phonenumber"
+            android:layout_width="270dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/tv_skypeout_fragment_inputphonenumber"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/tv_skypeout_fragment_countrycode_selected"
+            android:background="@drawable/skype_input"
+            android:gravity="center_vertical"
+            android:hint="@string/pressOKhint"
+            android:imeOptions="actionDone"
+            android:nextFocusLeft="@+id/iv_usrAc_skypeout"
+            android:paddingLeft="5dp"
+            android:phoneNumber="true"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btn_skypeout_fragment_voicecall"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/et_skypeout_fragment_input_phonenumber"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/voice_btn_off"
+            android:nextFocusDown="@id/btn_skypeout_fragment_voicecall"
+            android:nextFocusLeft="@+id/iv_usrAc_skypeout"
+            android:text="@string/voicecall"
+            android:textColor="@android:color/white"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

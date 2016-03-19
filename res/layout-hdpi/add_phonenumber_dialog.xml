@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/skype_img_window_bg" >
+
+    <TextView
+        android:id="@+id/tv_add_phonenumber_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/add_a_phonenumber"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+    
+     <ImageView
+        android:id="@+id/iv_add_phonenumber_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/tv_add_phonenumber_header"
+        android:scaleType="fitXY"
+        android:src="@drawable/skype_img_login_add_account_line" />
+
+    <!-- the add phone number view -->
+
+    <RelativeLayout
+        android:id="@+id/rel_add_phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_add_phonenumber_header"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp" >
+
+        <TextView
+            android:id="@+id/add_phonenumber_Tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_phone"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_add_phonenumber_countrycode"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/add_phonenumber_Tip"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/drop_down"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/et_add_phonenumber_enter"
+            android:layout_width="240dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/tv_add_phonenumber_countrycode"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_add_phonenumber_countrycode"
+            android:background="@drawable/skype_input"
+            android:hint="@string/pressOKhint"
+            android:paddingLeft="5dp"
+            android:textColor="@android:color/black"
+			android:inputType="textNoSuggestions|number"/>
+
+        <Button
+            android:id="@+id/btn_add_phonenumber_add"
+            android:layout_width="135dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/tv_add_phonenumber_countrycode"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_off"
+            android:text="@string/add"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_add_phonenumber_back"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/exit_tx"
+            android:gravity="center_vertical"
+            android:text="@string/back"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <!-- if the number is invalid,show this view -->
+
+    <RelativeLayout
+        android:id="@+id/rel_add_phonenumber_invalid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_add_phonenumber_header"
+        android:layout_marginTop="40dp" >
+
+        <ImageView
+            android:id="@+id/iv_add_phonenumber_invalid_warn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/skype_img_warning" />
+
+        <TextView
+            android:id="@+id/tv_add_phonenumber_invalid_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_add_phonenumber_invalid_warn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/invalid_phone_numer"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_add_phonenumber_invalid_ok"
+            android:layout_width="135dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/tv_add_phonenumber_invalid_warn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_on"
+            android:text="@string/ok"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

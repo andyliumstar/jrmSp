@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="577dp" >
+
+    <ImageView
+        android:id="@+id/iv_userprofile_fragment_optiontab"
+        android:layout_width="70dp"
+        android:layout_height="577dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:background="@drawable/skype_img_option_tab_l1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="574dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/skype_img_option_buddy_bg" >
+        
+		<!-- the head img ， skype name  and the line -->
+        <ImageView
+            android:id="@+id/iv_userprofile_fragment_head_bg"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/skype_img_head_bg" />
+
+        <ImageView
+            android:id="@+id/iv_userprofile_fragment_head"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_alignLeft="@id/iv_userprofile_fragment_head_bg"
+            android:layout_alignTop="@id/iv_userprofile_fragment_head_bg"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tv_userprofile_fragment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_userprofile_fragment_head_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_userprofile_fragment_head_bg"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/iv_userprofile_fragment_line"
+            android:layout_width="720dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_userprofile_fragment_head_bg"
+            android:layout_below="@id/iv_userprofile_fragment_head_bg"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/skype_img_login_add_account_line" />
+
+        <TextView
+            android:id="@+id/tv_userprofile_fragment_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/iv_userprofile_fragment_line"
+            android:layout_alignRight="@id/iv_userprofile_fragment_line"
+            android:text="(1/2)"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <!-- page one -->
+
+        <RelativeLayout
+            android:id="@+id/rel_userprofile_fragment_pageone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/iv_userprofile_fragment_line" >
+
+            <!-- full name -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_fullname"
+                style="@style/optionsFragmentTv"
+                android:text="@string/fullname" />
+
+            <com.jrm.skype.view.SKEditText
+                android:id="@+id/et_userprofile_fragment_fullname"
+                android:layout_alignTop="@id/tv_userprofile_fragment_fullname"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_fullname"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:nextFocusRight="@id/et_userprofile_fragment_fullname"
+                android:nextFocusUp="@id/et_userprofile_fragment_fullname"
+				style="@style/UserProfileEt"/>
+            <!-- gender -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_gender"
+                style="@style/optionsFragmentTv"
+                android:layout_below="@id/tv_userprofile_fragment_fullname"
+                android:text="@string/gender" />
+
+            <Spinner
+                android:id="@+id/sp_userprofile_fragment_gender"
+                android:layout_width="450dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/tv_userprofile_fragment_gender"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_gender"
+                android:background="@drawable/drop_down"
+                android:entries="@array/gender"
+                android:nextFocusDown="@+id/et_userprofile_fragment_birthday_D"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:nextFocusRight="@id/sp_userprofile_fragment_gender"
+                android:paddingLeft="5dp" />
+            <!-- birth day -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_birthday"
+                style="@style/optionsFragmentTv"
+                android:layout_below="@id/tv_userprofile_fragment_gender"
+                android:text="@string/birthday" />
+
+            <com.jrm.skype.view.SKEditText
+                android:id="@+id/et_userprofile_fragment_birthday_D"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/tv_userprofile_fragment_birthday"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_birthday"
+                android:background="@drawable/skype_input"
+                android:inputType="number"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:paddingLeft="5dp"
+                android:imeOptions="actionDone"/>
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_birthday_D"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/et_userprofile_fragment_birthday_D"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/et_userprofile_fragment_birthday_D"
+                android:gravity="center_vertical"
+                android:text="@string/D"
+                android:textColor="@android:color/black" />
+
+            <com.jrm.skype.view.SKEditText
+                android:id="@+id/et_userprofile_fragment_birthday_M"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/tv_userprofile_fragment_birthday_D"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_birthday_D"
+                android:background="@drawable/skype_input"
+                android:inputType="number"
+                android:paddingLeft="5dp" 
+                android:imeOptions="actionDone"/>
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_birthday_M"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/et_userprofile_fragment_birthday_M"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/et_userprofile_fragment_birthday_M"
+                android:gravity="center_vertical"
+                android:text="@string/M"
+                android:textColor="@android:color/black" />
+
+            <com.jrm.skype.view.SKEditText
+                android:id="@+id/et_userprofile_fragment_birthday_Y"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/tv_userprofile_fragment_birthday_M"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_birthday_M"
+                android:background="@drawable/skype_input"
+                android:inputType="number"
+                android:nextFocusRight="@id/et_userprofile_fragment_birthday_Y"
+                android:paddingLeft="5dp" 
+                android:imeOptions="actionDone"/>
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_birthday_Y"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/et_userprofile_fragment_birthday_Y"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/et_userprofile_fragment_birthday_Y"
+                android:gravity="center_vertical"
+                android:text="@string/Y"
+                android:textColor="@android:color/black" />
+
+            <!-- signature -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_sig"
+                style="@style/optionsFragmentTv"
+                android:layout_below="@id/tv_userprofile_fragment_birthday"
+                android:text="@string/signature" />
+
+            <com.jrm.skype.view.SKEditText
+                android:id="@+id/et_userprofile_fragment_sig"
+                android:layout_height="90dp"
+                android:gravity="top"
+                android:lineSpacingExtra="5dp"
+                android:layout_alignTop="@id/tv_userprofile_fragment_sig"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_sig"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:nextFocusRight="@id/et_userprofile_fragment_sig"
+                android:nextFocusUp="@+id/et_userprofile_fragment_birthday_D"
+                android:singleLine="false"
+                android:inputType="textNoSuggestions|textMultiLine"
+				style="@style/UserProfileEt"/>
+
+            <!-- email -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_email"
+                style="@style/optionsFragmentTv"
+                android:layout_below="@id/et_userprofile_fragment_sig"
+                android:text="@string/email" />
+
+            <com.jrm.skype.view.SKEditText
+                android:id="@+id/et_userprofile_fragment_email"
+                android:layout_alignTop="@id/tv_userprofile_fragment_email"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_email"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:nextFocusRight="@id/et_userprofile_fragment_email"
+                style="@style/UserProfileEt"/>
+
+            <!-- homepage -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_homepage"
+                style="@style/optionsFragmentTv"
+                android:layout_below="@id/tv_userprofile_fragment_email"
+                android:text="@string/homepage" />
+
+            <com.jrm.skype.view.SKEditText
+                android:id="@+id/et_userprofile_fragment_homepage"
+                android:layout_alignTop="@id/tv_userprofile_fragment_homepage"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_homepage"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:nextFocusRight="@id/et_userprofile_fragment_homepage"
+                style="@style/UserProfileEt"/>
+            <!-- picture -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_picture"
+                style="@style/optionsFragmentTv"
+                android:layout_below="@id/tv_userprofile_fragment_homepage"
+                android:text="@string/picture" />
+
+            <Button
+                android:id="@+id/btn_userprofile_fragment_picture"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/tv_userprofile_fragment_picture"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_picture"
+                android:background="@drawable/button_on"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:text="@string/change_picture"
+                android:textColor="@android:color/white" />
+            <!-- next page -->
+            <Button
+                android:id="@+id/btn_userprofile_fragment_nextPage"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/tv_userprofile_fragment_picture"
+                android:layout_alignRight="@id/et_userprofile_fragment_homepage"
+                android:background="@drawable/button_on"
+                android:text="@string/next_page"
+                android:textColor="@android:color/white"/>
+        </RelativeLayout>
+
+        <!-- page two -->
+
+        <RelativeLayout
+            android:id="@+id/rel_userprofile_fragment_pagetwo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/iv_userprofile_fragment_line"
+            android:visibility="gone" >
+
+            <!-- country/region -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_country"
+                style="@style/optionsFragmentTv"
+                android:text="@string/country_region" />
+
+            <Spinner
+                android:id="@+id/sp_userprofile_fragment_country"
+                android:layout_width="450dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/tv_userprofile_fragment_country"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_country"
+                android:background="@drawable/drop_down"
+                android:entries="@array/countryName"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:nextFocusUp="@id/sp_userprofile_fragment_country"
+                android:paddingLeft="5dp" />
+            <!-- state/province -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_state"
+                style="@style/optionsFragmentTv"
+                android:layout_below="@id/tv_userprofile_fragment_country"
+                android:text="@string/state_province" />
+
+            <com.jrm.skype.view.SKEditText
+                android:id="@+id/et_userprofile_fragment_state"
+                android:layout_alignTop="@id/tv_userprofile_fragment_state"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_state"
+                style="@style/UserProfileEt"/>
+            <!-- City -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_city"
+                style="@style/optionsFragmentTv"
+                android:layout_below="@id/tv_userprofile_fragment_state"
+                android:text="@string/city" />
+
+            <com.jrm.skype.view.SKEditText
+                android:id="@+id/et_userprofile_fragment_city"
+                android:layout_alignTop="@id/tv_userprofile_fragment_city"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_city"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                style="@style/UserProfileEt"/>
+            <!-- language -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_language"
+                style="@style/optionsFragmentTv"
+                android:layout_below="@id/tv_userprofile_fragment_city"
+                android:text="@string/language" />
+
+            <Spinner
+                android:id="@+id/sp_userprofile_fragment_language"
+                android:layout_width="450dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/tv_userprofile_fragment_language"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_language"
+                android:background="@drawable/drop_down"
+                android:entries="@array/languageName"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:paddingLeft="5dp" />
+
+            <!-- home phone -->
+
+            <TextView
+                android:id="@+id/userprofile_fragment_homephTip"
+                style="@style/optionsFragmentTv"
+                android:layout_below="@id/tv_userprofile_fragment_language"
+                android:text="@string/homeph" />
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_homeph_code"
+                style="@style/phoneTv"
+                android:layout_alignTop="@id/userprofile_fragment_homephTip"
+                android:layout_toRightOf="@id/userprofile_fragment_homephTip"
+                android:nextFocusLeft="@+id/tv_options_usrprofile" />
+
+            <com.jrm.skype.view.SKEditText
+                android:id="@+id/et_userprofile_fragment_homeph"
+                android:layout_width="298dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/tv_userprofile_fragment_homeph_code"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_homeph_code"
+                android:background="@drawable/skype_input"
+                android:hint="@string/pressOKhint"
+                android:paddingLeft="5dp"
+                android:phoneNumber="true" 
+				android:inputType="textNoSuggestions"/>
+
+            <!-- if have set the number,show it -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_homeph"
+                android:layout_width="450dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/userprofile_fragment_homephTip"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/userprofile_fragment_homephTip"
+                android:background="@drawable/skype_input"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:paddingLeft="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="17dp" />
+
+            <!-- office phone -->
+
+            <TextView
+                android:id="@+id/userprofile_fragment_officephTip"
+                style="@style/optionsFragmentTv"
+                android:layout_below="@id/userprofile_fragment_homephTip"
+                android:text="@string/officeph" />
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_officeph_code"
+                style="@style/phoneTv"
+                android:layout_alignTop="@id/userprofile_fragment_officephTip"
+                android:layout_toRightOf="@id/userprofile_fragment_officephTip"
+                android:nextFocusLeft="@+id/tv_options_usrprofile" />
+
+            <com.jrm.skype.view.SKEditText
+                android:id="@+id/et_userprofile_fragment_officeph"
+                android:layout_width="298dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/tv_userprofile_fragment_officeph_code"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_officeph_code"
+                android:background="@drawable/skype_input"
+                android:hint="@string/pressOKhint"
+                android:paddingLeft="5dp"
+                android:phoneNumber="true" />
+
+            <!-- if have set the number,show it -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_officeph"
+                android:layout_width="450dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/userprofile_fragment_officephTip"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/userprofile_fragment_officephTip"
+                android:background="@drawable/skype_input"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:paddingLeft="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="17dp" />
+
+            <!-- mobile phone -->
+
+            <TextView
+                android:id="@+id/userprofile_fragment_mobilephTip"
+                style="@style/optionsFragmentTv"
+                android:layout_below="@id/userprofile_fragment_officephTip"
+                android:text="@string/mobileph" />
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_mobileph_code"
+                style="@style/phoneTv"
+                android:layout_alignTop="@id/userprofile_fragment_mobilephTip"
+                android:layout_toRightOf="@id/userprofile_fragment_mobilephTip"
+                android:nextFocusDown="@+id/btn_userprofile_fragment_lastPage"
+                android:nextFocusLeft="@+id/tv_options_usrprofile" />
+
+            <com.jrm.skype.view.SKEditText
+                android:id="@+id/et_userprofile_fragment_mobileph"
+                android:layout_width="298dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/tv_userprofile_fragment_mobileph_code"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_userprofile_fragment_mobileph_code"
+                android:background="@drawable/skype_input"
+                android:hint="@string/pressOKhint"
+                android:imeOptions="actionDone"
+                android:nextFocusDown="@+id/btn_userprofile_fragment_lastPage"
+                android:paddingLeft="5dp"
+                android:phoneNumber="true" />
+
+            <!-- if have set the number,show it -->
+
+            <TextView
+                android:id="@+id/tv_userprofile_fragment_mobileph"
+                android:layout_width="450dp"
+                android:layout_height="35dp"
+                android:layout_alignTop="@id/userprofile_fragment_mobilephTip"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/userprofile_fragment_mobilephTip"
+                android:background="@drawable/skype_input"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:nextFocusDown="@+id/btn_userprofile_fragment_lastPage"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:paddingLeft="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="17dp" />
+            
+             <!-- last page -->
+            <Button
+                android:id="@+id/btn_userprofile_fragment_lastPage"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_alignRight="@id/sp_userprofile_fragment_language"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_on"
+                android:text="@string/last_page"
+                android:nextFocusLeft="@+id/tv_options_usrprofile"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

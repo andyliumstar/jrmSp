@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp" >
+
+    <TextView
+        android:id="@+id/tv_message_name"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:singleLine="true"
+        android:textColor="@android:color/darker_gray" 
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/tv_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_message_name"
+        android:textColor="@android:color/darker_gray" 
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/tv_message_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="@android:color/darker_gray" 
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/tv_message_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_message_name"
+        android:layout_marginLeft="15dp"
+        android:textColor="@android:color/black" 
+        android:textSize="14dp"/>
+
+</RelativeLayout>

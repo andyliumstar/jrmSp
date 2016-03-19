@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="577dp" >
+
+    <!-- the img tab to show the four funtions at the left of the activity -->
+
+    <ImageView
+        android:id="@+id/iv_privacyset_fragment_optiontab"
+        android:layout_width="70dp"
+        android:layout_height="577dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/skype_img_option_tab_l5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="574dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/skype_img_option_buddy_bg" >
+
+        <!-- Allow calls from -->
+
+        <TextView
+            android:id="@+id/tv_privacyset_fragment_allowcalls"
+            style="@style/optionsFragmentTv"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/allow_calls_from"
+            android:layout_width="wrap_content" />
+
+        <Spinner
+            android:id="@+id/sp_privacyset_fragment_allowcalls"
+            android:layout_width="450dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@id/tv_privacyset_fragment_allowcalls"
+            android:layout_below="@id/tv_privacyset_fragment_allowcalls"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/drop_down"
+            android:entries="@array/allowcallsfrom"
+            android:nextFocusLeft="@+id/tv_options_privacySet"
+            android:nextFocusUp="@id/sp_privacyset_fragment_allowcalls"
+            android:paddingLeft="5dp" />
+
+        <!-- automatically receive video from -->
+
+        <TextView
+            android:id="@+id/tv_privacyset_fragment_autoreceivevideo"
+            style="@style/optionsFragmentTv"
+            android:layout_alignLeft="@id/sp_privacyset_fragment_allowcalls"
+            android:layout_below="@id/sp_privacyset_fragment_allowcalls"
+            android:text="@string/automatically_video_from"
+            android:layout_width="wrap_content" />
+
+        <Spinner
+            android:id="@+id/sp_privacyset_fragment_autoreceivevideo"
+            android:layout_width="450dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@id/tv_privacyset_fragment_autoreceivevideo"
+            android:layout_below="@id/tv_privacyset_fragment_autoreceivevideo"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/drop_down"
+            android:entries="@array/receivevideofrom"
+            android:nextFocusDown="@id/sp_privacyset_fragment_autoreceivevideo"
+            android:nextFocusLeft="@+id/tv_options_privacySet"
+            android:paddingLeft="5dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

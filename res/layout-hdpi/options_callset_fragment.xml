@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="577dp" >
+
+    <!-- the img tab to show the four funtions at the left of the activity -->
+
+    <ImageView
+        android:id="@+id/iv_callset_fragment_optiontab"
+        android:layout_width="70dp"
+        android:layout_height="577dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/skype_img_option_tab_l7" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="574dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/skype_img_option_buddy_bg" >
+
+        <!-- the head tip  and the line -->
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_callforward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/call_forward"
+            android:textColor="@android:color/black"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:id="@+id/iv_callset_fragment_line"
+            android:layout_width="720dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_callset_fragment_callforward"
+            android:layout_below="@id/tv_callset_fragment_callforward"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/skype_img_login_add_account_line" />
+
+        <!-- forward call when 。。。。。。。 off on -->
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_forward_not_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_callset_fragment_line"
+            android:layout_below="@id/iv_callset_fragment_line"
+            android:layout_marginTop="15dp"
+            android:text="@string/forward_not_on"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <Spinner
+            android:id="@+id/sp_callset_fragment_forward"
+            style="@style/callsetSp"
+            android:layout_alignTop="@id/tv_callset_fragment_forward_not_on"
+            android:layout_toRightOf="@id/tv_callset_fragment_forward_not_on"
+            android:nextFocusLeft="@+id/tv_options_callSet"
+            android:nextFocusUp="@id/sp_callset_fragment_forward" />
+
+        <!-- first call -->
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_firstcall_code"
+            style="@style/phoneTv"
+            android:layout_alignLeft="@id/tv_callset_fragment_forward_not_on"
+            android:layout_below="@id/tv_callset_fragment_forward_not_on"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="15dp"
+            android:nextFocusLeft="@+id/tv_options_callSet" />
+
+        <com.jrm.skype.view.SKEditText
+            android:id="@+id/et_callset_fragment_firstcall"
+            android:layout_width="298dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/tv_callset_fragment_firstcall_code"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_callset_fragment_firstcall_code"
+            android:background="@drawable/skype_input"
+            android:gravity="center_vertical"
+            android:hint="@string/pressOKhint"
+            android:nextFocusRight="@id/et_callset_fragment_firstcall"
+            android:paddingLeft="5dp"
+            android:phoneNumber="true" />
+
+        <!-- if have set the number,show it -->
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_firstcall"
+            android:layout_width="450dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@id/tv_callset_fragment_forward_not_on"
+            android:layout_below="@id/tv_callset_fragment_forward_not_on"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/skype_input"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:nextFocusLeft="@+id/tv_options_callSet"
+            android:nextFocusRight="@id/tv_callset_fragment_firstcall"
+            android:paddingLeft="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="17dp" />
+
+        <!-- second call -->
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_secondcall_code"
+            style="@style/phoneTv"
+            android:layout_alignLeft="@id/tv_callset_fragment_forward_not_on"
+            android:layout_below="@id/tv_callset_fragment_forward_not_on"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="65dp"
+            android:nextFocusLeft="@+id/tv_options_callSet" />
+
+        <com.jrm.skype.view.SKEditText
+            android:id="@+id/et_callset_fragment_secondcall"
+            android:layout_width="298dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/tv_callset_fragment_secondcall_code"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_callset_fragment_secondcall_code"
+            android:background="@drawable/skype_input"
+            android:gravity="center_vertical"
+            android:hint="@string/pressOKhint"
+            android:nextFocusRight="@id/et_callset_fragment_secondcall"
+            android:paddingLeft="5dp"
+            android:phoneNumber="true" />
+
+        <!-- if have set the number,show it -->
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_secondcall"
+            android:layout_width="450dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@id/tv_callset_fragment_forward_not_on"
+            android:layout_below="@id/tv_callset_fragment_forward_not_on"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/skype_input"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:nextFocusLeft="@+id/tv_options_callSet"
+            android:nextFocusRight="@id/tv_callset_fragment_secondcall"
+            android:paddingLeft="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="17dp" />
+        <!-- third call -->
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_thirdcall_code"
+            style="@style/phoneTv"
+            android:layout_alignLeft="@id/tv_callset_fragment_forward_not_on"
+            android:layout_below="@id/tv_callset_fragment_forward_not_on"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="115dp"
+            android:nextFocusLeft="@+id/tv_options_callSet" />
+
+        <com.jrm.skype.view.SKEditText
+            android:id="@+id/et_callset_fragment_thirdcall"
+            android:layout_width="298dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/tv_callset_fragment_thirdcall_code"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_callset_fragment_thirdcall_code"
+            android:background="@drawable/skype_input"
+            android:gravity="center_vertical"
+            android:hint="@string/pressOKhint"
+            android:nextFocusRight="@id/et_callset_fragment_thirdcall"
+            android:paddingLeft="5dp"
+            android:phoneNumber="true" />
+        <!-- if have set the number,show it -->
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_thirdcall"
+            android:layout_width="450dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@id/tv_callset_fragment_forward_not_on"
+            android:layout_below="@id/tv_callset_fragment_forward_not_on"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="115dp"
+            android:background="@drawable/skype_input"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:nextFocusLeft="@+id/tv_options_callSet"
+            android:nextFocusRight="@id/tv_callset_fragment_thirdcall"
+            android:paddingLeft="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="17dp" />
+        <!-- forward calls if i do not answer -->
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_forward_not_answer"
+            style="@style/optionsFragmentTv"
+            android:layout_alignLeft="@id/tv_callset_fragment_forward_not_on"
+            android:layout_below="@id/tv_callset_fragment_forward_not_on"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="172dp"
+            android:text="@string/forward_not_answer"
+            android:layout_width="wrap_content" />
+
+        <com.jrm.skype.view.SKEditText
+            android:id="@+id/et_callset_fragment_withinsecond"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/tv_callset_fragment_forward_not_answer"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/tv_callset_fragment_forward_not_answer"
+            android:background="@drawable/skype_input"
+            android:gravity="center"
+            android:nextFocusLeft="@+id/tv_options_callSet"
+            android:nextFocusRight="@id/et_callset_fragment_withinsecond"
+            android:numeric="integer"
+            android:maxLength="3" />
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_seconds"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/et_callset_fragment_withinsecond"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/et_callset_fragment_withinsecond"
+            android:gravity="center_vertical"
+            android:text="@string/seconds"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <!-- warning -->
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_callset_fragment_forward_not_answer"
+            android:layout_below="@id/tv_callset_fragment_forward_not_answer"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/skype_img_warning_18x18"
+            android:text="@string/callset_warn" />
+
+        <!-- voicemail -->
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_voicemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_callset_fragment_warn"
+            android:layout_below="@id/tv_callset_fragment_warn"
+            android:layout_marginTop="25dp"
+            android:text="@string/VM"
+            android:textColor="@android:color/black"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:id="@+id/iv_callset_fragment_line_buttom"
+            android:layout_width="720dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_callset_fragment_voicemail"
+            android:layout_below="@id/tv_callset_fragment_voicemail"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/skype_img_login_add_account_line" />
+
+        <TextView
+            android:id="@+id/tv_callset_fragment_send_unanswer_vm"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@id/iv_callset_fragment_line_buttom"
+            android:layout_below="@id/iv_callset_fragment_line_buttom"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/send_unanswered_vm"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <Spinner
+            android:id="@+id/sp_callset_fragment_send_unanswer_vm"
+            style="@style/callsetSp"
+            android:layout_alignTop="@id/tv_callset_fragment_send_unanswer_vm"
+            android:layout_toRightOf="@id/tv_callset_fragment_send_unanswer_vm"
+            android:nextFocusDown="@id/sp_callset_fragment_send_unanswer_vm"
+            android:nextFocusRight="@id/sp_callset_fragment_send_unanswer_vm" />
+        
+          <ImageView
+            android:id="@+id/iv_callset_fragment_call_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_callset_fragment_line_buttom"
+            android:layout_below="@id/tv_callset_fragment_send_unanswer_vm"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/skype_img_warning_18x18" />
+        
+        <TextView
+            android:layout_width="550dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_callset_fragment_line_buttom"
+            android:layout_below="@id/tv_callset_fragment_send_unanswer_vm"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/callforward_note"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="577dp" >
+
+    <!-- the img tab to show the four funtions at the left of the activity -->
+
+    <ImageView
+        android:id="@+id/iv_audioset_fragment_optiontab"
+        android:layout_width="70dp"
+        android:layout_height="577dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/skype_img_option_tab_l4" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="574dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/skype_img_option_buddy_bg" >
+
+        <!-- speaker vol -->
+
+        <TextView
+            android:id="@+id/tv_audioset_fragment_speakervol_tip"
+            style="@style/optionsFragmentTv"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/speaker_vol"
+            android:layout_width="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_audioset_fragment_speakervol"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/tv_audioset_fragment_speakervol_tip"
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@id/tv_audioset_fragment_speakervol_tip"
+            android:background="@drawable/skype_input"
+            android:focusable="true"
+            android:gravity="center"
+            android:nextFocusUp="@+id/tv_options_audioSet"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/tv_audioset_fragment_speakervol"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_audioset_fragment_speakervol"
+            android:gravity="center_vertical"
+            android:text="%"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <!-- ringing vol -->
+
+        <TextView
+            android:id="@+id/tv_audioset_fragment_ringingvol_tip"
+            style="@style/optionsFragmentTv"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/ringing_vol"
+            android:layout_width="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_audioset_fragment_ringingvol"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@id/tv_audioset_fragment_speakervol"
+            android:layout_alignTop="@id/tv_audioset_fragment_ringingvol_tip"
+            android:layout_toRightOf="@id/tv_audioset_fragment_ringingvol_tip"
+            android:background="@drawable/skype_input"
+            android:focusable="true"
+            android:gravity="center"
+            android:nextFocusDown="@+id/tv_options_audioSet"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/tv_audioset_fragment_ringingvol"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_audioset_fragment_ringingvol"
+            android:gravity="center_vertical"
+            android:text="%"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <!-- tip -->
+
+        <TextView
+            style="@style/optionsFragmentTv"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:text="@string/audio_set_tip" />
+    </RelativeLayout>
+
+</RelativeLayout>

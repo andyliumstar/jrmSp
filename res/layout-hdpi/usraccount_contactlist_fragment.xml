@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="505dp"
+    android:paddingRight="20dp" >
+
+    <!-- the fragment view have two main parts:the listview and its item functions -->
+
+    <!-- the img tab to show the four functions at the left of the activity -->
+
+    <ImageView
+        android:id="@+id/iv_conactlist_fragment_optiontab"
+        android:layout_width="wrap_content"
+        android:layout_height="505dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/skype_img_tab_l1"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="505dp"
+        android:layout_marginLeft="40dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/skype_img_contact_list_bg" >
+ 
+        <TextView
+            android:id="@+id/tv_conactlist_fragment_listheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/contact_list"
+            android:textColor="@android:color/black"
+            android:textSize="22dp" />
+        <!-- the contact list -->
+
+        <ListView
+            android:id="@+id/lv_contactlist_fragment_contact"
+            style="@style/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@id/tv_conactlist_fragment_listheader"
+            android:layout_below="@id/tv_conactlist_fragment_listheader"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:listSelector="@drawable/tv_focus"
+            android:nextFocusDown="@id/lv_contactlist_fragment_contact"
+            android:nextFocusLeft="@+id/iv_usrAc_contactlist"
+            android:nextFocusUp="@id/lv_contactlist_fragment_contact"
+            android:paddingRight="10dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

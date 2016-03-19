@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/skype_img_window_bg" >
+
+    <TextView
+        android:id="@+id/tv_add_contact_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/add_contact_type"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+    
+    <ImageView
+        android:id="@+id/iv_add_contact_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/tv_add_contact_header"
+        android:scaleType="fitXY"
+        android:src="@drawable/skype_img_login_add_account_line" />
+
+    <Button
+        android:id="@+id/btn_add_contact_skype"
+        android:layout_width="180dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/tv_add_contact_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/button_off"
+        android:text="@string/skype_contact"
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btn_add_contact_phone"
+        android:layout_width="180dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/btn_add_contact_skype"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_off"
+        android:text="@string/phone_number"
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tv_add_contact_back"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:drawableLeft="@drawable/exit_tx"
+        android:gravity="center_vertical"
+        android:text="@string/back"
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
+
+</RelativeLayout>

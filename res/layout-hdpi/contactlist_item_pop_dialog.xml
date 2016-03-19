@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="380dp"
+    android:layout_height="fill_parent"
+    android:background="@drawable/skype_img_window_bg" >
+
+    <!-- first part: contact's head image and name and state -->
+
+    <RelativeLayout
+        android:id="@+id/rel_contactlist_item_pop_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp" >
+
+        <include layout="@layout/head_state_name" />
+    </RelativeLayout>
+
+    <!-- second part: the mid functions of the listitem,it will change layout a few times -->
+    <!-- 1 the main  mid functions of the listitem: video call ,voice call and view profile ,send ... -->
+
+    <RelativeLayout
+        android:id="@+id/rel_contactlist_item_pop_midMain"
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
+        android:layout_below="@id/rel_contactlist_item_pop_top"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp" >
+
+        <!-- two button: video and voice  call -->
+
+        <Button
+            android:id="@+id/btn_contactlist_item_pop_videocall"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:background="@drawable/video_btn_off"
+            android:nextFocusLeft="@id/btn_contactlist_item_pop_videocall"
+            android:nextFocusUp="@id/btn_contactlist_item_pop_videocall"
+            android:text="@string/videocall"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_contactlist_item_pop_voicecall"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/btn_contactlist_item_pop_videocall"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/btn_contactlist_item_pop_videocall"
+            android:background="@drawable/voice_btn_off"
+            android:nextFocusRight="@id/btn_contactlist_item_pop_voicecall"
+            android:nextFocusUp="@id/btn_contactlist_item_pop_voicecall"
+            android:text="@string/voicecall"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+
+        <!-- for options:viewprofile, sendVM,sendMs, block and remove -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/btn_contactlist_item_pop_videocall"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/skype_img_window_bg"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_contactlist_item_pop_viewprofile"
+                style="@style/contactlistTv"
+                android:nextFocusLeft="@id/tv_contactlist_item_pop_viewprofile"
+                android:nextFocusRight="@id/tv_contactlist_item_pop_viewprofile"
+                android:text="@string/view_profile" />
+
+            <TextView
+                android:id="@+id/tv_contactlist_item_pop_sendMSG"
+                style="@style/contactlistTv"
+                android:nextFocusLeft="@id/tv_contactlist_item_pop_sendMSG"
+                android:nextFocusRight="@id/tv_contactlist_item_pop_sendMSG"
+                android:text="@string/sendMS" />
+
+            <TextView
+                android:id="@+id/tv_contactlist_item_pop_sendVM"
+                style="@style/contactlistTv"
+                android:nextFocusLeft="@id/tv_contactlist_item_pop_sendVM"
+                android:nextFocusRight="@id/tv_contactlist_item_pop_sendVM"
+                android:text="@string/sendVM" />
+
+            <TextView
+                android:id="@+id/tv_contactlist_item_pop_block"
+                style="@style/contactlistTv"
+                android:nextFocusLeft="@id/tv_contactlist_item_pop_block"
+                android:nextFocusRight="@id/tv_contactlist_item_pop_block"
+                android:text="@string/block" />
+
+            <TextView
+                android:id="@+id/tv_contactlist_item_pop_remove"
+                style="@style/contactlistTv"
+                android:nextFocusDown="@id/tv_contactlist_item_pop_remove"
+                android:nextFocusLeft="@id/tv_contactlist_item_pop_remove"
+                android:nextFocusRight="@id/tv_contactlist_item_pop_remove"
+                android:text="@string/remove" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 2,when press video voice call -->
+
+    <RelativeLayout
+        android:id="@+id/rel_contactlist_item_pop_midVvcall"
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
+        android:layout_below="@id/rel_contactlist_item_pop_top"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/skype_img_window_bg"
+        android:visibility="gone" >
+
+        <include layout="@layout/vvcall_connecting" />
+    </RelativeLayout>
+
+    <!-- 3,when press View Profile the infos of contact will show out -->
+
+    <RelativeLayout
+        android:id="@+id/rel_contactlist_item_pop_midProfile"
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
+        android:layout_below="@id/rel_contactlist_item_pop_top"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/skype_img_window_bg"
+        android:padding="20dp"
+        android:visibility="gone" >
+        <include layout="@layout/contactinfo" 
+            android:id="@+id/contactlist_item_pop_midRel_contact_profile"/>
+        <include layout="@layout/other_type_info" 
+            android:id="@+id/contactlist_item_pop_midRel_other_profile"/>
+
+    </RelativeLayout>
+
+    <!-- 4,when press send voice email -->
+
+    <RelativeLayout
+        android:id="@+id/rel_contactlist_item_pop_midSendVM"
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
+        android:layout_below="@id/rel_contactlist_item_pop_top"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/skype_img_window_bg"
+        android:visibility="gone" >
+
+        <include layout="@layout/sendvm" />
+    </RelativeLayout>
+
+    <!-- 5 when press block or remove -->
+
+    <RelativeLayout
+        android:id="@+id/rel_contactlist_item_pop_midBlockOrremove"
+        android:layout_width="fill_parent"
+        android:layout_height="320dp"
+        android:layout_below="@id/rel_contactlist_item_pop_top"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/skype_img_window_bg"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_contactlist_item_pop_blockOrremove_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/skype_img_warning" />
+
+        <TextView
+            android:id="@+id/tv_contactlist_item_pop_blockOrremove_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_contactlist_item_pop_blockOrremove_warn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_contactlist_item_pop_blockOrremove_yes"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/button_off"
+            android:nextFocusLeft="@id/btn_contactlist_item_pop_blockOrremove_yes"
+            android:nextFocusUp="@id/btn_contactlist_item_pop_blockOrremove_yes"
+            android:text="@string/yes"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_contactlist_item_pop_blockOrremove_cancel"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/btn_contactlist_item_pop_blockOrremove_yes"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/btn_contactlist_item_pop_blockOrremove_yes"
+            android:background="@drawable/button_off"
+            android:nextFocusRight="@id/btn_contactlist_item_pop_blockOrremove_cancel"
+            android:nextFocusUp="@id/btn_contactlist_item_pop_blockOrremove_cancel"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+    <!-- the end of the  mid functions of the listitem -->
+
+
+    <!-- third part the bottom functions exit and vol+,vol- -->
+
+    <RelativeLayout
+        android:id="@+id/rel_contactlist_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp" >
+
+        <include
+            android:id="@+id/titleLayout"
+            layout="@layout/vol_back" />
+    </RelativeLayout>
+
+</RelativeLayout> <!-- item function part -->

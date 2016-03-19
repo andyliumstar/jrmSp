@@ -1,0 +1,337 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/skype_img_login_bg" >
+
+    <!-- the main mid view for creating a new account -->
+
+    <RelativeLayout
+        android:layout_width="700dp"
+        android:layout_height="470dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/skype_img_window_bg" >
+
+        <TextView
+            android:id="@+id/tv_createAc_create_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/creatnewaccount"
+            android:textColor="@android:color/black"
+            android:textSize="25dp" />
+
+        <!-- the new account infos to input -->
+        <!-- full name -->
+
+        <TextView
+            android:id="@+id/tv_createAc_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_below="@id/tv_createAc_create_tip"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/fullname"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/et_createAc_fullname"
+            style="@style/createAccountEt"
+            android:layout_alignTop="@id/tv_createAc_fullname"
+            android:layout_toRightOf="@id/tv_createAc_fullname"
+            android:hint="@string/namehint"
+            android:maxLength="70" />
+
+        <!-- skype name -->
+
+        <TextView
+            android:id="@+id/tv_createAc_skypename"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignRight="@id/tv_createAc_fullname"
+            android:layout_below="@id/tv_createAc_fullname"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:text="@string/skype_name"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/et_createAc_skypename"
+            style="@style/createAccountEt"
+            android:layout_alignTop="@id/tv_createAc_skypename"
+            android:layout_toRightOf="@id/tv_createAc_skypename"
+            android:hint="@string/sknamehint"
+            android:maxLength="32" />
+
+        <!-- password -->
+
+        <TextView
+            android:id="@+id/tv_createAc_password"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignRight="@id/tv_createAc_skypename"
+            android:layout_below="@id/tv_createAc_skypename"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:text="@string/password"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/et_createAc_password"
+            style="@style/createAccountEt"
+            android:layout_alignTop="@id/tv_createAc_password"
+            android:layout_toRightOf="@id/tv_createAc_password"
+            android:hint="@string/passwordhint"
+            android:maxLength="20"
+            android:password="true"/>
+
+        <!-- repassword -->
+
+        <TextView
+            android:id="@+id/tv_createAc_repassword"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignRight="@id/tv_createAc_password"
+            android:layout_below="@id/tv_createAc_password"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:text="@string/repassword"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/et_createAc_repassword"
+            style="@style/createAccountEt"
+            android:layout_alignTop="@id/tv_createAc_repassword"
+            android:layout_toRightOf="@id/tv_createAc_repassword"
+            android:hint="@string/passwordhint"
+            android:maxLength="20"
+            android:password="true" />
+
+        <!-- email -->
+
+        <TextView
+            android:id="@+id/tv_createAc_email"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignRight="@id/tv_createAc_repassword"
+            android:layout_below="@id/tv_createAc_repassword"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:text="@string/email"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/et_createAc_email"
+            style="@style/createAccountEt"
+            android:layout_alignTop="@id/tv_createAc_email"
+            android:layout_toRightOf="@id/tv_createAc_email"
+            android:imeOptions="actionDone"
+            android:hint="@string/pressOKhint" />
+
+        <!-- the checkbox -->
+
+        <ImageView
+            android:id="@+id/iv_createAc_sendSkNews"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignLeft="@id/et_createAc_email"
+            android:layout_below="@id/et_createAc_email"
+            android:layout_marginTop="15dp"
+            android:focusable="true"
+            android:src="@drawable/skype_img_login_checkbox" />
+
+        <TextView
+            android:id="@+id/tv_createAc_sendSkNews"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_below="@id/et_createAc_email"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/iv_createAc_sendSkNews"
+            android:gravity="center_vertical"
+            android:text="@string/sendSKnews"
+            android:textColor="@android:color/black" />
+<!-- input tip,if input is wrong -->
+
+        <ImageView
+            android:id="@+id/iv_createAc_skypename_wrong"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignRight="@id/et_createAc_skypename"
+            android:layout_alignTop="@id/et_createAc_skypename"
+            android:layout_marginRight="27dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/err_icon"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_createAc_password_wrong"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignRight="@id/et_createAc_password"
+            android:layout_alignTop="@id/et_createAc_password"
+            android:layout_marginRight="27dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/err_icon"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_createAc_repassword_wrong"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignRight="@id/et_createAc_repassword"
+            android:layout_alignTop="@id/et_createAc_repassword"
+            android:layout_marginRight="27dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/err_icon"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_createAc_email_wrong"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignRight="@id/et_createAc_email"
+            android:layout_alignTop="@id/et_createAc_email"
+            android:layout_marginRight="27dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/err_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_createAc_skypename_wrong"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:singleLine="true"
+            android:layout_alignRight="@id/et_createAc_skypename"
+            android:layout_alignTop="@id/et_createAc_skypename"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/skype_img_tips_bg"
+            android:gravity="bottom"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="15dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_createAc_password_wrong"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:singleLine="true"
+            android:layout_alignRight="@id/et_createAc_password"
+            android:layout_alignTop="@id/et_createAc_password"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/skype_img_tips_bg"
+            android:gravity="bottom"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="15dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_createAc_repassword_wrong"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:singleLine="true"
+            android:layout_alignRight="@id/et_createAc_repassword"
+            android:layout_alignTop="@id/et_createAc_repassword"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/skype_img_tips_bg"
+            android:gravity="bottom"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="15dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_createAc_email_wrong"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:singleLine="true"
+            android:layout_alignRight="@id/et_createAc_email"
+            android:layout_alignTop="@id/et_createAc_email"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/skype_img_tips_bg"
+            android:gravity="bottom"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="15dp"
+            android:visibility="gone" />
+
+        <!-- the line -->
+        <ImageView
+            android:id="@+id/iv_createAc_line"
+            android:layout_width="580dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_createAc_sendSkNews"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/skype_img_login_add_account_line" />
+
+        <!-- the tips ,and two buttons :agreecreate,cancel -->
+
+        <TextView
+            android:id="@+id/tv_createAc_email_wrong"
+            android:layout_width="580dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_createAc_line"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/readandaccept"
+            android:textColor="@android:color/black"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/btn_createAc_agree"
+            android:layout_width="190dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="140dp"
+            android:background="@drawable/button_on"
+            android:focusable="false"
+            android:text="@string/agree_create"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/btn_createAc_cancel"
+            android:layout_width="190dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="60dip"
+            android:layout_toRightOf="@id/btn_createAc_agree"
+            android:background="@drawable/button_on"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <!-- the buttom back -->
+
+    <TextView
+        android:id="@+id/tv_createAc_back"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="25dp"
+        android:clickable="true"
+        android:drawableLeft="@drawable/skype_img_btn_exit"
+        android:text="@string/back"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+</RelativeLayout>

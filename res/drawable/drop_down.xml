@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/skype_img_input_drop_down_focus" android:state_focused="true"/>
+    <item android:drawable="@drawable/skype_img_input_drop_down_disable" android:state_enabled="false"/>
+    <item android:drawable="@drawable/skype_img_input_drop_down"/>
+</selector>

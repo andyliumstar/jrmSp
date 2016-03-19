@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/skype_img_window_bg" >
+
+    <TextView
+        android:id="@+id/tv_add_skype_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:text="@string/add_a_skype_contact"
+        android:textColor="@android:color/black"
+        android:textSize="16dp" />
+    
+    <ImageView
+        android:id="@+id/iv_add_skype_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tv_add_skype_header"
+        android:scaleType="fitXY"
+        android:src="@drawable/skype_img_login_add_account_line" />
+
+    <!-- the search view group -->
+
+    <RelativeLayout
+        android:id="@+id/rel_add_skype_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_add_skype_header"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/tv_add_skype_enter_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_skype"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/et_add_skype_enter"
+            android:layout_width="180dp"
+            android:layout_height="28dp"
+            android:layout_below="@id/tv_add_skype_enter_tip"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/skype_input"
+            android:gravity="center_vertical"
+            android:hint="@string/pressOKhint"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black" 
+			android:inputType="textNoSuggestions"/>
+
+        <Button
+            android:id="@+id/btn_add_skype_search"
+            android:layout_width="100dp"
+            android:layout_height="28dp"
+            android:layout_below="@id/et_add_skype_enter"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_off"
+            android:text="@string/search"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_add_skype_back"
+            android:layout_width="75dp"
+            android:layout_height="23dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/exit_tx"
+            android:text="@string/back"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            android:gravity="center_vertical" />
+    </RelativeLayout>
+
+    <!-- the search running view group -->
+
+    <RelativeLayout
+        android:id="@+id/rel_add_skype_searching"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tv_add_skype_header"
+        android:layout_marginTop="30dp" >
+
+        <ImageView
+            android:id="@+id/iv_add_skype_searching"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true" 
+            android:background="@drawable/signinganimation"/>
+
+        <TextView
+            android:id="@+id/tv_add_skype_searching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_add_skype_searching"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/search_run"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/btn_add_skype_cancel"
+            android:layout_width="105dp"
+            android:layout_height="28dp"
+            android:layout_below="@id/tv_add_skype_searching"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_on"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <!-- the not match view group -->
+
+    <RelativeLayout
+        android:id="@+id/rel_add_skype_nomatch"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tv_add_skype_header"
+        android:layout_marginTop="30dp" >
+
+        <ImageView
+            android:id="@+id/iv_add_skype_nomatch_warn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/skype_img_warning" />
+
+        <TextView
+            android:id="@+id/tv_add_skype_nomatch_warn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_add_skype_nomatch_warn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/no_match_found"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/btn_add_skype_nomatch_ok"
+            android:layout_width="135dp"
+            android:layout_height="28dp"
+            android:layout_below="@id/tv_add_skype_nomatch_warn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_on"
+            android:text="@string/ok"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

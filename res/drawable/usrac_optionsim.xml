@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+    <item android:drawable="@drawable/skype_img_icon_option_focus" android:state_focused="true"/>
+    <item android:drawable="@drawable/skype_img_icon_option" />
+
+</selector>

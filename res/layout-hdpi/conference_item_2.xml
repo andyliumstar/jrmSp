@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/conference_item2"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/iv_conference_item2_1"
+        style="@style/conferenceIv"
+        android:layout_marginLeft="455dp" />
+
+    <TextView
+        android:id="@+id/tv_conference_item2_1"
+        style="@style/conferenceTv"
+        android:layout_alignLeft="@id/iv_conference_item2_1"
+        android:layout_below="@id/iv_conference_item2_1"/>
+
+    <ImageView
+        android:id="@+id/iv_conference_item2_2"
+        style="@style/conferenceIv"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/iv_conference_item2_1" />
+
+    <TextView
+        android:id="@+id/tv_conference_item2_2"
+        style="@style/conferenceTv"
+        android:layout_alignLeft="@id/iv_conference_item2_2"
+        android:layout_below="@id/iv_conference_item2_2" />
+
+</RelativeLayout>

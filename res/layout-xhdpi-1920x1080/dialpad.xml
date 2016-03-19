@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="165dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/skype_img_call_dial_bg" >
+
+    <TextView
+        android:id="@+id/tv_dialpad_dtmf"
+        android:layout_width="135dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/skype_input"
+        android:textSize="14dp" 
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"/>
+
+    <GridLayout
+        android:id="@+id/gl_dialpad_pad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_below="@id/tv_dialpad_dtmf"
+        android:columnCount="3" >
+
+        <ImageButton
+            android:id="@+id/iv_dialpad_one"
+            android:layout_width="43dp"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_dial_action"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/dial_num_1"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/iv_dialpad_two"
+            android:layout_width="43dp"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_dial_action"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/dial_num_2" 
+            android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:id="@+id/iv_dialpad_three"
+            android:layout_width="43dp"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_dial_action"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/dial_num_3" 
+            android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:id="@+id/iv_dialpad_four"
+            android:layout_width="43dp"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_dial_action"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/dial_num_4"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/iv_dialpad_five"
+            android:layout_width="43dp"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_dial_action"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/dial_num_5"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/iv_dialpad_six"
+            android:layout_width="43dp"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_dial_action"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/dial_num_6"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/iv_dialpad_seven"
+            android:layout_width="43dp"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_dial_action"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/dial_num_7"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/iv_dialpad_eight"
+            android:layout_width="43dp"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_dial_action"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/dial_num_8" 
+            android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:id="@+id/iv_dialpad_nine"
+            android:layout_width="43dp"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_dial_action"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/dial_num_9"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/iv_dialpad_star"
+            android:layout_width="43dp"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_dial_action"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/dial_num_star"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/iv_dialpad_zero"
+            android:layout_width="43dp"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_dial_action"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/dial_num_0"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/iv_dialpad_pound"
+            android:layout_width="43dp"
+            android:layout_height="34dp"
+            android:background="@drawable/btn_dial_action"
+            android:soundEffectsEnabled="false"
+            android:src="@drawable/dial_num_pound" 
+            android:scaleType="fitXY"/>
+    </GridLayout>
+
+</RelativeLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/skype_img_login_bg" >
+
+    <!-- top view :duration and logo -->
+
+    <RelativeLayout
+        android:id="@+id/rel_conference_top"
+        android:layout_width="fill_parent"
+        android:layout_height="68dp" >
+
+        <TextView
+            android:id="@+id/tv_conference_calldurationTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="375dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/call_duration"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+
+        <com.jrm.skype.view.SKTimerTextView
+            android:id="@+id/tv_conference_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/tv_conference_calldurationTip"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_conference_calldurationTip"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="150dp"
+            android:background="@drawable/skype_img_call_line" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/skype_img_call_skypelogo" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/conference_scrollView"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/rel_conference_top"
+        android:layout_height="315dp"
+        android:layout_marginTop="40dp" >
+    </ScrollView>
+
+    <!-- bottom view :stop video,hold,mute,full screen ,end call -->
+
+    <RelativeLayout
+        android:id="@+id/rel_conference_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/conference_scrollView"
+        android:layout_marginTop="53dp" 
+        android:background="@drawable/skype_img_call_control_black_bg" >
+
+        <!-- hold -->
+
+        <Button
+            android:id="@+id/btn_conference_hold_resume"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="120dp" />
+
+        <TextView
+            android:id="@+id/tv_conference_hold_resume"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/btn_conference_hold_resume"
+            android:layout_below="@id/btn_conference_hold_resume"
+            android:gravity="center_horizontal"
+            android:textSize="10dp" />
+        <!-- mute -->
+
+        <Button
+            android:id="@+id/btn_conference_mute"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="270dp"
+            android:layout_toRightOf="@id/btn_conference_hold_resume" />
+
+        <TextView
+            android:id="@+id/tv_conference_mute"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/btn_conference_mute"
+            android:layout_below="@id/btn_conference_mute"
+            android:gravity="center_horizontal"
+            android:textSize="10dp" />
+        <!-- end call -->
+
+        <Button
+            android:id="@+id/btn_conference_end_call"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="270dp"
+            android:layout_toRightOf="@id/btn_conference_mute"
+            android:background="@drawable/button_end_call" />
+
+        <TextView
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/btn_conference_end_call"
+            android:layout_below="@id/btn_conference_end_call"
+            android:gravity="center_horizontal"
+            android:text="@string/endcall"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_conference_pup_pause"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/skype_img_call_control_popup_call_pause"
+        android:visibility="gone" />
+
+</RelativeLayout>

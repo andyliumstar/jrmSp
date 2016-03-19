@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/skype_img_add_popup_notice_invitation_bg"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="7dp" >
+
+    <TextView
+        android:id="@+id/tv_invitation_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/request_from"
+        android:textColor="@android:color/black"
+        android:textSize="14dp" />
+
+    <RelativeLayout
+        android:id="@+id/rel_invitation_request"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_invitation_header"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"  >
+
+        <ListView
+            android:id="@+id/lv_invitation_request"
+            style="@style/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_invitation_request"
+            android:layout_marginBottom="25dp"
+            android:listSelector="@drawable/tv_focus"
+            android:paddingRight="5dp" />
+
+        <TextView
+            android:id="@+id/tv_invitation_back"
+            android:layout_width="75dp"
+            android:layout_height="23dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:drawableLeft="@drawable/exit_tx"
+            android:text="@string/back"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_invitation_accept"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_invitation_header"
+        android:layout_marginTop="10dp"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_invitation_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btn_invitation_accept"
+            android:layout_width="85dp"
+            android:layout_height="23dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_off"
+            android:text="@string/accept"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_invitation_block"
+            android:layout_width="85dp"
+            android:layout_height="23dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@id/btn_invitation_accept"
+            android:background="@drawable/button_off"
+            android:text="@string/block"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_invitation_decline"
+            android:layout_width="85dp"
+            android:layout_height="23dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@id/btn_invitation_block"
+            android:background="@drawable/button_off"
+            android:text="@string/decline"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

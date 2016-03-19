@@ -1,0 +1,10 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/skype_connecting1" android:duration="80" />
+    <item android:drawable="@drawable/skype_connecting2" android:duration="80" />
+    <item android:drawable="@drawable/skype_connecting3" android:duration="80" />
+    <item android:drawable="@drawable/skype_connecting4" android:duration="80" />
+    <item android:drawable="@drawable/skype_connecting5" android:duration="80" />
+    <item android:drawable="@drawable/skype_connecting6" android:duration="80" />
+    <item android:drawable="@drawable/skype_connecting7" android:duration="80" />
+</animation-list>

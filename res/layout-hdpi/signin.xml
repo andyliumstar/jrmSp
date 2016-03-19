@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_signin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/skype_img_login_bg" >
+
+    <LinearLayout
+        android:layout_width="550dp"
+        android:layout_height="360dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/skype_img_window_bg"
+        android:orientation="vertical" >
+
+        <!-- 3 parts: -->
+        <!-- 1,  headImage , skype name and password -->
+
+        <RelativeLayout
+            android:id="@+id/rel_signin_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_signin_welcome"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="@string/welcome"
+                android:textColor="@android:color/black"
+                android:textSize="22dp" />
+
+            <!-- head image -->
+
+            <ImageView
+                android:id="@+id/iv_signin_head_bg"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_below="@id/tv_signin_welcome"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/skype_img_head_bg" />
+
+            <ImageView
+                android:id="@+id/iv_signin_head"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/tv_signin_welcome"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/skype_img_login_user_head_default" />
+
+            <!-- name -->
+
+            <TextView
+                android:id="@+id/tv_signin_skypename"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_signin_welcome"
+                android:layout_marginLeft="155dp"
+                android:gravity="center_vertical"
+                android:text="@string/skype_name"
+                android:textColor="@android:color/black"
+                android:textSize="17dp" />
+
+            <EditText
+                android:id="@+id/et_signin_skypename"
+                android:layout_width="240dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/tv_signin_welcome"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_signin_skypename"
+                android:background="@drawable/skype_input"
+                android:gravity="center_vertical"
+                android:hint="@string/pressOKhint"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="17dp"
+                android:maxLength="32" 
+                android:inputType="textNoSuggestions"/>
+
+            <!-- password -->
+
+            <TextView
+                android:id="@+id/tv_signin_password"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignRight="@id/tv_signin_skypename"
+                android:layout_below="@id/tv_signin_skypename"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:text="@string/password"
+                android:textColor="@android:color/black"
+                android:textSize="17dp" />
+
+            <EditText
+                android:id="@+id/et_signin_password"
+                style="@style/passwordEt"
+                android:layout_width="240dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/et_signin_skypename"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/tv_signin_password"
+                android:background="@drawable/skype_input"
+                android:maxLength="20"
+                android:hint="@string/pressOKhint" 
+                android:imeOptions="actionDone"/>
+        </RelativeLayout>
+
+        <!-- 2, two checkbox in the mid -->
+
+        <RelativeLayout
+            android:id="@+id/rel_signin_mid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="145dp"
+            android:layout_marginTop="30dp" >
+
+            <ImageView
+                android:id="@+id/iv_signin_signwhenskstart"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/skype_img_login_checkbox"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/tv_signin_signwhenskstart"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_signin_signwhenskstart"
+                android:gravity="center_vertical"
+                android:text="@string/sign_when_skype_start"
+                android:textColor="@android:color/black"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_signin_startwhentvstart"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_below="@id/iv_signin_signwhenskstart"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/skype_img_login_checkbox"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/tv_signin_startwhentvstart"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignTop="@id/iv_signin_startwhentvstart"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_signin_startwhentvstart"
+                android:gravity="center_vertical"
+                android:text="@string/start_skype_when_tvstart"
+                android:textColor="@android:color/black"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <!-- 3 two buttons ,signin and create account -->
+
+        <RelativeLayout
+            android:id="@+id/rel_signin_buttom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp" >
+
+            <Button
+                android:id="@+id/btn_signin_signin"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_off"
+                android:text="@string/signin"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_signin_create"
+                android:layout_width="170dp"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@id/btn_signin_signin"
+                android:background="@drawable/button_off"
+                android:text="@string/create_account"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- the buttom exit -->
+
+    <TextView
+        android:id="@+id/tv_signin_exit"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="25dp"
+        android:clickable="true"
+        android:drawableLeft="@drawable/skype_img_btn_exit"
+        android:text="@string/exit"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+</RelativeLayout>

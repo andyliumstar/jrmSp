@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+    
+    <!-- skype name -->
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_skypenameTip"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:text="@string/skype_name"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_skypename"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/tv_item_pop_profile_skypenameTip"
+        android:textColor="@android:color/darker_gray" />
+
+    <!-- Birth Date -->
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_birthdayTip"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_alignLeft="@id/tv_item_pop_profile_skypenameTip"
+        android:layout_below="@id/tv_item_pop_profile_skypenameTip"
+        android:layout_marginTop="10dp"
+        android:text="@string/birthday"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_birthday"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_alignLeft="@id/tv_item_pop_profile_skypename"
+        android:layout_below="@id/tv_item_pop_profile_skypename"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/darker_gray" />
+    <!-- gender -->
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_genderTip"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_alignLeft="@id/tv_item_pop_profile_birthdayTip"
+        android:layout_below="@id/tv_item_pop_profile_birthdayTip"
+        android:layout_marginTop="10dp"
+        android:text="@string/gender"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_gender"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_alignLeft="@id/tv_item_pop_profile_birthday"
+        android:layout_below="@id/tv_item_pop_profile_birthday"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/darker_gray" />
+    <!-- language -->
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_languageTip"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_alignLeft="@id/tv_item_pop_profile_genderTip"
+        android:layout_below="@id/tv_item_pop_profile_genderTip"
+        android:layout_marginTop="10dp"
+        android:text="@string/language"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_language"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_alignLeft="@id/tv_item_pop_profile_gender"
+        android:layout_below="@id/tv_item_pop_profile_gender"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/darker_gray" />
+
+    <!-- location -->
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_locationTip"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@id/tv_item_pop_profile_languageTip"
+        android:layout_below="@id/tv_item_pop_profile_languageTip"
+        android:layout_marginTop="10dp"
+        android:text="@string/location"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_location"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_alignLeft="@id/tv_item_pop_profile_language"
+        android:layout_below="@id/tv_item_pop_profile_language"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/darker_gray" />
+
+    <!-- mobile phone -->
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_mobilephoneTip"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@id/tv_item_pop_profile_locationTip"
+        android:layout_below="@id/tv_item_pop_profile_locationTip"
+        android:layout_marginTop="10dp"
+        android:text="@string/mobileph"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_mobilephone"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_alignLeft="@id/tv_item_pop_profile_location"
+        android:layout_below="@id/tv_item_pop_profile_location"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/darker_gray" />
+
+    <!-- email -->
+
+    <TextView
+        android:id="@+id/item_pop_profile_emailTip"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@id/tv_item_pop_profile_mobilephoneTip"
+        android:layout_below="@id/tv_item_pop_profile_mobilephoneTip"
+        android:layout_marginTop="10dp"
+        android:text="@string/email"
+        android:textColor="@android:color/black"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_item_pop_profile_email"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        android:layout_alignLeft="@id/tv_item_pop_profile_mobilephone"
+        android:layout_below="@id/tv_item_pop_profile_mobilephone"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/darker_gray" 
+		android:visibility="gone" />
+
+</RelativeLayout>
